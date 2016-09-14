@@ -66,12 +66,14 @@ event_detail_pages.uniq.each do |detail_page_link|
     cond.search('dt').each_with_index do |plan, i|
       ((conditions[i]||={})['type']||=[]) << plan.inner_text.strip
     end
-    cond.search('div[@class="condition"]').each_with_index do |plan, i|
-      ((conditions[i]||={})['male']||=[]) << plan.search('div[@class="male"]').inner_text.strip unless plan.search('div[@class="male"]').blank?         
-      ((conditions[i]||={})['female']||=[]) << plan.search('div[@class="female"]').inner_text.strip unless plan.search('div[@class="female"]').blank? 
-    end  
+    cond.search('dd').each_with_index do |div, i|
+      div.search('div[@class="condition"]').each do |plan|
+        ((conditions[i]||={})['male']||=[]) << plan.search('div[@class="male"]').inner_text.strip unless plan.search('div[@class="male"]').blank?         
+        ((conditions[i]||={})['female']||=[]) << plan.search('div[@class="female"]').inner_text.strip unless plan.search('div[@class="female"]').blank? 
+      end
+    end    
   end
-  
+  p conditions
   qualifications = {}
   detail_page.search('//div[@itemprop="description"]/dl').each do |cond|
     cond.search('dt').each_with_index do |plan, i|
