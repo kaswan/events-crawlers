@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the otona-cafe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: otona-cafe 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-14 10:11+0900\n"
+"PO-Revision-Date: 2016-09-14 10:11+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Address"
+msgstr ""
+
+msgid "Age range for female"
+msgstr ""
+
+msgid "Age range for male"
+msgstr ""
+
+msgid "All images link"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "CSV Download"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Eligibility for female"
+msgstr ""
+
+msgid "Eligibility for male"
+msgstr ""
+
+msgid "Event ID"
+msgstr ""
+
+msgid "Event date time"
+msgstr ""
+
+msgid "Event url"
+msgstr ""
+
+msgid "Exeo japan"
+msgstr ""
+
+msgid "ExeoJapan|Address"
+msgstr ""
+
+msgid "ExeoJapan|Age range for female"
+msgstr ""
+
+msgid "ExeoJapan|Age range for male"
+msgstr ""
+
+msgid "ExeoJapan|All images link"
+msgstr ""
+
+msgid "ExeoJapan|Description"
+msgstr ""
+
+msgid "ExeoJapan|Eligibility for female"
+msgstr ""
+
+msgid "ExeoJapan|Eligibility for male"
+msgstr ""
+
+msgid "ExeoJapan|Event date time"
+msgstr ""
+
+msgid "ExeoJapan|Event url"
+msgstr ""
+
+msgid "ExeoJapan|Important reminder"
+msgstr ""
+
+msgid "ExeoJapan|Main image url"
+msgstr ""
+
+msgid "ExeoJapan|Postalcode"
+msgstr ""
+
+msgid "ExeoJapan|Prefecture name"
+msgstr ""
+
+msgid "ExeoJapan|Price for female"
+msgstr ""
+
+msgid "ExeoJapan|Price for male"
+msgstr ""
+
+msgid "ExeoJapan|Reservation state for female"
+msgstr ""
+
+msgid "ExeoJapan|Reservation state for male"
+msgstr ""
+
+msgid "ExeoJapan|Title"
+msgstr ""
+
+msgid "ExeoJapan|Venue name"
+msgstr ""
+
+msgid "Important reminder"
+msgstr ""
+
+msgid "Main image url"
+msgstr ""
+
+msgid "Postalcode"
+msgstr ""
+
+msgid "Prefecture name"
+msgstr ""
+
+msgid "Price for female"
+msgstr ""
+
+msgid "Price for male"
+msgstr ""
+
+msgid "Reservation state for female"
+msgstr ""
+
+msgid "Reservation state for male"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Venue name"
+msgstr ""

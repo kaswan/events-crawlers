@@ -1,0 +1,150 @@
+# Japanese translations for otona-cafe package.
+# Copyright (C) 2016 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the otona-cafe package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: otona-cafe 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2016-09-13 16:32+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+msgid "Address"
+msgstr "住所"
+
+msgid "Age range for female"
+msgstr "対象年齢【女性】"
+
+msgid "Age range for male"
+msgstr "対象年齢【男性】"
+
+msgid "All images link"
+msgstr "画像リンク"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "CSV Download"
+msgstr ""
+
+msgid "Description"
+msgstr "イベント内容"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "Eligibility for female"
+msgstr "参加資格【女性】"
+
+msgid "Eligibility for male"
+msgstr "参加資格【男性】"
+
+msgid "Event ID"
+msgstr "イベントID"
+
+msgid "Event date time"
+msgstr "開催日時"
+
+msgid "Event url"
+msgstr "イベントURL"
+
+msgid "Exeo japan"
+msgstr ""
+
+msgid "ExeoJapan|Address"
+msgstr "住所"
+
+msgid "ExeoJapan|Age range for female"
+msgstr "対象年齢【女性】"
+
+msgid "ExeoJapan|Age range for male"
+msgstr "対象年齢【男性】"
+
+msgid "ExeoJapan|All images link"
+msgstr "画像リンク"
+
+msgid "ExeoJapan|Description"
+msgstr "イベント内容"
+
+msgid "ExeoJapan|Eligibility for female"
+msgstr "参加資格【女性】"
+
+msgid "ExeoJapan|Eligibility for male"
+msgstr "参加資格【男性】"
+
+msgid "ExeoJapan|Event date time"
+msgstr "開催日時"
+
+msgid "ExeoJapan|Event url"
+msgstr "イベントURL"
+
+msgid "ExeoJapan|Important reminder"
+msgstr "注意事項"
+
+msgid "ExeoJapan|Main image url"
+msgstr "メイン画像URL"
+
+msgid "ExeoJapan|Postalcode"
+msgstr "郵便番号"
+
+msgid "ExeoJapan|Prefecture name"
+msgstr "県名"
+
+msgid "ExeoJapan|Price for female"
+msgstr "料金【女性】"
+
+msgid "ExeoJapan|Price for male"
+msgstr "料金【男性】"
+
+msgid "ExeoJapan|Reservation state for female"
+msgstr "予約状況【女性】"
+
+msgid "ExeoJapan|Reservation state for male"
+msgstr "予約状況【男性】"
+
+msgid "ExeoJapan|Title"
+msgstr "タイトル"
+
+msgid "ExeoJapan|Venue name"
+msgstr "開催場所"
+
+msgid "Important reminder"
+msgstr "注意事項"
+
+msgid "Main image url"
+msgstr "メイン画像URL"
+
+msgid "Postalcode"
+msgstr "郵便番号"
+
+msgid "Prefecture name"
+msgstr "県名"
+
+msgid "Price for female"
+msgstr "料金【女性】"
+
+msgid "Price for male"
+msgstr "料金【男性】"
+
+msgid "Reservation state for female"
+msgstr "予約状況【女性】"
+
+msgid "Reservation state for male"
+msgstr "予約状況【男性】"
+
+msgid "Show"
+msgstr "詳細"
+
+msgid "Title"
+msgstr "タイトル"
+
+msgid "Venue name"
+msgstr "開催場所"

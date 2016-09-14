@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Exeo Japans(<%= @exeo_japans.size %>件)</h1>
+<%= link_to _('CSV Download'), csv_download_exeo_japans_path %>
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th><%= _('Event ID') %></th>
+      <th><%= _('Title') %></th>
+      <th><%= _('Venue name') %></th>
+      <th><%= _('Postalcode') %></th>
+      <th><%= _('Prefecture name') %></th>
+      <th><%= _('Address') %></th>
+      <th><%= _('Event date time') %></th>      
+      <th><%= _('Reservation state for male') %></th>
+      <th><%= _('Reservation state for female') %></th>
+      <th><%= _('Price for male') %></th>
+      <th><%= _('Price for female') %></th>
+      <th><%= _('Eligibility for male') %></th>
+      <th><%= _('Eligibility for female') %></th>
+      <th><%= _('Age range for male') %></th>
+      <th><%= _('Age range for female') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exeo_japans.each do |exeo_japan| %>
+      <tr>
+        <td><%= link_to exeo_japan.id, exeo_japan.event_url, {target: '_blank'} %></td>
+        <td><%= exeo_japan.title %></td>
+        <td><%= exeo_japan.venue_name %></td>
+        <td><%= exeo_japan.postalcode %></td>
+        <td><%= exeo_japan.prefecture_name %></td>
+        <td><%= exeo_japan.address %></td>
+        <td><%= exeo_japan.event_date_time %></td>        
+        <td><%= exeo_japan.reservation_state_for_male %></td>
+        <td><%= exeo_japan.reservation_state_for_female %></td>
+        <td><%= exeo_japan.price_for_male %></td>
+        <td><%= exeo_japan.price_for_female %></td>
+        <td><%= exeo_japan.eligibility_for_male %></td>
+        <td><%= exeo_japan.eligibility_for_female %></td>
+        <td><%= exeo_japan.age_range_for_male %></td>
+        <td><%= exeo_japan.age_range_for_female %></td>
+        <td><%= link_to _('Show'), exeo_japan %></td>
+        <td><%= link_to _('Edit'), edit_exeo_japan_path(exeo_japan) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Exeo japan', new_exeo_japan_path %>

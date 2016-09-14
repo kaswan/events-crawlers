@@ -1,0 +1,51 @@
+class ExeoJapan < ActiveRecord::Base
+  def self.csv_head
+    [
+      human_attribute_name(:id),
+      human_attribute_name(:event_url),
+      human_attribute_name(:title),
+      human_attribute_name(:description),
+      human_attribute_name(:event_date_time),
+      human_attribute_name(:venue_name),
+      human_attribute_name(:postalcode),
+      human_attribute_name(:prefecture_name),
+      human_attribute_name(:address),
+      human_attribute_name(:reservation_state_for_male),
+      human_attribute_name(:reservation_state_for_female),
+      human_attribute_name(:price_for_male),
+      human_attribute_name(:price_for_female),
+      human_attribute_name(:eligibility_for_male),
+      human_attribute_name(:eligibility_for_female),
+      human_attribute_name(:age_range_for_male),
+      human_attribute_name(:age_range_for_female),
+      human_attribute_name(:important_reminder),
+      human_attribute_name(:main_image_url),
+      human_attribute_name(:all_images_link)
+    ].flatten
+  end
+
+  def csv_data
+    [
+     self.id,
+      self.event_url,
+      self.title,
+      self.description,
+      self.event_date_time,
+      self.venue_name,
+      self.postalcode,
+      self.prefecture_name,
+      self.address,
+      self.reservation_state_for_male,
+      self.reservation_state_for_female,
+      self.price_for_male,
+      self.price_for_female,
+      self.eligibility_for_male,
+      self.eligibility_for_female,
+      self.age_range_for_male,
+      self.age_range_for_female,
+      self.important_reminder,
+      self.main_image_url,
+      self.all_images_link
+    ].flatten
+  end
+end

@@ -1,0 +1,1 @@
+json.partial! "exeo_japans/exeo_japan", exeo_japan: @exeo_japan

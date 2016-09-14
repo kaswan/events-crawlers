@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_url: MyString
+  main_image_url: MyString
+  venue_name: MyString
+  postalcode: MyString
+  prefecture_name: MyString
+  address: MyString
+  event_date_time: 2016-09-12 16:47:23
+  title: MyString
+  description: MyText
+  reservation_state_for_male: MyString
+  reservation_state_for_female: MyString
+  price_for_male: MyString
+  price_for_female: MyString
+  eligibility_for_male: MyString
+  eligibility_for_female: MyString
+  age_range_for_male: MyString
+  age_range_for_female: MyString
+  important_reminder: MyString
+  all_images_link: MyText
+
+two:
+  event_url: MyString
+  main_image_url: MyString
+  venue_name: MyString
+  postalcode: MyString
+  prefecture_name: MyString
+  address: MyString
+  event_date_time: 2016-09-12 16:47:23
+  title: MyString
+  description: MyText
+  reservation_state_for_male: MyString
+  reservation_state_for_female: MyString
+  price_for_male: MyString
+  price_for_female: MyString
+  eligibility_for_male: MyString
+  eligibility_for_female: MyString
+  age_range_for_male: MyString
+  age_range_for_female: MyString
+  important_reminder: MyString
+  all_images_link: MyText

@@ -1,0 +1,93 @@
+<%= simple_form_for(@exeo_japan) do |f| %>
+  <% if @exeo_japan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exeo_japan.errors.count, "error") %> prohibited this exeo_japan from being saved:</h2>
+
+      <ul>
+      <% @exeo_japan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_url %><br>
+    <%= f.text_field :event_url %>
+  </div>
+  <div class="field">
+    <%= f.label :main_image_url %><br>
+    <%= f.text_field :main_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :venue_name %><br>
+    <%= f.text_field :venue_name %>
+  </div>
+  <div class="field">
+    <%= f.label :postalcode %><br>
+    <%= f.text_field :postalcode %>
+  </div>
+  <div class="field">
+    <%= f.label :prefecture_name %><br>
+    <%= f.text_field :prefecture_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :event_date_time %><br>
+    <%= f.datetime_select :event_date_time %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :reservation_state_for_male %><br>
+    <%= f.text_field :reservation_state_for_male %>
+  </div>
+  <div class="field">
+    <%= f.label :reservation_state_for_female %><br>
+    <%= f.text_field :reservation_state_for_female %>
+  </div>
+  <div class="field">
+    <%= f.label :price_for_male %><br>
+    <%= f.text_field :price_for_male %>
+  </div>
+  <div class="field">
+    <%= f.label :price_for_female %><br>
+    <%= f.text_field :price_for_female %>
+  </div>
+  <div class="field">
+    <%= f.label :eligibility_for_male %><br>
+    <%= f.text_field :eligibility_for_male %>
+  </div>
+  <div class="field">
+    <%= f.label :eligibility_for_female %><br>
+    <%= f.text_field :eligibility_for_female %>
+  </div>
+  <div class="field">
+    <%= f.label :age_range_for_male %><br>
+    <%= f.text_field :age_range_for_male %>
+  </div>
+  <div class="field">
+    <%= f.label :age_range_for_female %><br>
+    <%= f.text_field :age_range_for_female %>
+  </div>
+  <div class="field">
+    <%= f.label :important_reminder %><br>
+    <%= f.text_field :important_reminder %>
+  </div>
+  <div class="field">
+    <%= f.label :all_images_link %><br>
+    <%= f.text_area :all_images_link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

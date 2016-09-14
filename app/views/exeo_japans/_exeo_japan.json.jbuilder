@@ -1,0 +1,2 @@
+json.extract! exeo_japan, :id, :event_url, :main_image_url, :venue_name, :postalcode, :prefecture_name, :address, :event_date_time, :title, :description, :reservation_state_for_male, :reservation_state_for_female, :price_for_male, :price_for_female, :eligibility_for_male, :eligibility_for_female, :age_range_for_male, :age_range_for_female, :important_reminder, :all_images_link, :created_at, :updated_at
+json.url exeo_japan_url(exeo_japan, format: :json)

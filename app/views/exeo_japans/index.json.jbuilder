@@ -1,0 +1,1 @@
+json.array! @exeo_japans, partial: 'exeo_japans/exeo_japan', as: :exeo_japan

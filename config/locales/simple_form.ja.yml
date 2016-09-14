@@ -1,0 +1,79 @@
+ja:
+  simple_form:
+    "yes": 'はい'
+    "no": 'いいえ'
+    required:
+      text: '必須'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "入力内容に誤りがありました"
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    labels:
+      defaults:
+        name: "名前"
+        gender: "性別"
+        email: "メールアドレス"
+        password: "パスワード"
+        current_password: "現在のパスワード"
+        password_confirmation: "パスワード(確認用)"
+        remember_me: "パスワードを記憶"
+        image_url: "写真"
+        image: "写真"
+        furigana: "ふりがな"
+        date_of_birth: "生年月日"
+        postalcode: "郵便番号"
+        prefecture: "都道府県"
+        prefecture_id: "都道府県"
+        address: "住所"
+        tel: "電話番号"
+        fax: "FAX番号"
+        enterprise: "所属"
+        qualification: "保有資格"
+        specialized_field: "専門分野"
+        introduction: "紹介文"
+        home_page_url: "ホームページ"
+        contact_info: "連絡先"
+        occupation: "職業"
+        relationship: "続柄"
+        interest: "興味・関心"
+        remarks: "備考"        
+        summary: "概要"        
+        recommend_for: "おすすめポイント"        
+        is_free: "無料"
+        price: "セット料金"
+        created_at: "登録日時"
+      exeo_japan:
+        event_url: 'イベントURL'
+        main_image_url: 'メイン画像URL'
+        venue_name: '開催場所'
+        postalcode: '郵便番号'
+        prefecture_name: '県名'
+        address: '住所'
+        event_date_time: '開催日時'
+        title: 'タイトル'
+        description: 'イベント内容'
+        reservation_state_for_male: '予約状況【男性】'
+        reservation_state_for_female: '予約状況【女性】'
+        price_for_male: '料金【男性】'
+        price_for_female: '料金【女性】'
+        eligibility_for_male: '参加資格【男性】'
+        eligibility_for_female: '参加資格【女性】'
+        age_range_for_male: '対象年齢【男性】'
+        age_range_for_female: '対象年齢【女性】'
+        important_reminder: '注意事項'
+        all_images_link: "画像リンク"
