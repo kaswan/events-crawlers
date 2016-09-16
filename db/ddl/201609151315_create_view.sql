@@ -1,0 +1,2 @@
+CREATE OR REPLACE VIEW `otocafe_development`.`posts` AS SELECT *  FROM `otocafe_wp`.`wpf0c254posts` WHERE `post_type` LIKE 'post';   
+CREATE OR REPLACE VIEW `otocafe_development`.`post_metas` AS SELECT * FROM `otocafe_wp`.`wpf0c254postmeta` WHERE 1;

@@ -8,6 +8,7 @@ class ExeoJapansController < ApplicationController
   # GET /exeo_japans.json
   def index
     @exeo_japans = ExeoJapan.all
+    @posts = Post.all
   end
 
   # GET /exeo_japans/1
