@@ -126,7 +126,9 @@ event_detail_pages.uniq.each do |detail_page_link|
       end
     end
     exeo.save
-  end  
+  end
+    
   #exit
 end
 
+ExeoJapan.create_post
