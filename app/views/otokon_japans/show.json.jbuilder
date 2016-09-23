@@ -1,0 +1,1 @@
+json.partial! "otokon_japans/otokon_japan", otokon_japan: @otokon_japan

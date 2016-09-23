@@ -1,7 +1,4 @@
 <p id="notice"><%= notice %></p>
-<% @posts.each do |p| %>
-  <%= p.inspect %>
-<% end %>
 <h1>Exeo Japans(<%= @exeo_japans.size %>件)</h1>
 <%= link_to _('CSV Download'), csv_download_exeo_japans_path %>
 <table class="table table-striped">
