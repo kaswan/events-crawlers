@@ -47,18 +47,13 @@ event_detail_pages.uniq.each do |detail_page_link|
     address = cont.search('//dd').first.inner_text.strip
     if address.split(/['県']/).size > 1
       prefecture_name = address.split(/['県']/).first
-      p "########1"
     elsif address.split(/['府']/).size > 1
       prefecture_name = address.split(/['府']/).first
-      p "########2" 
     elsif address.split(/['都']/).size > 1
       prefecture_name = address.split(/['都']/).first
-      p "########3"
     elsif address.split(/['区']/).size > 1 && address.split(/['区']/).first.strip == "新宿"
-      p "########4"
       prefecture_name = "東京"
     elsif address.split(/['市']/).size > 1 && address.split(/['市']/).first.strip == "名古屋"
-      p "########5"
       prefecture_name = "愛知"
     elsif address.split('海道').size > 1 && address.split('海道').first.strip == "北"
       prefecture_name = "北海道"
@@ -75,13 +70,13 @@ event_detail_pages.uniq.each do |detail_page_link|
   reservation_state_for_female = detail_page.search('//div[@id="party-body-hed"]//table[@class="table-ojt_twin"]//td').last.search('img/@alt').to_s
   
   event_date_time_detail = detail_page.search('//div[@class="partyList-date"]//table').at('tr').search('td').inner_text.strip.gsub(/['\n']/,'').split(/['（','）']/)
-  p event_date = Date.parse(event_date_time_detail.first.gsub(/['年','月','日']/,'-'))
-  p event_date_time_detail
+  event_date = Date.parse(event_date_time_detail.first.gsub(/['年','月','日']/,'-'))
+  event_date_time_detail
   
-  p event_start_time =  event_date_time_detail[2].split('〜').first
-  p event_date_time = DateTime.parse("#{event_date} #{event_start_time} +900")
-  p event_end_time =  event_date_time_detail[2].split('〜').last
-  p reception_time = event_date_time_detail[3].gsub('受付時間：','')
+  event_start_time =  event_date_time_detail[2].split('〜').first
+  event_date_time = DateTime.parse("#{event_date} #{event_start_time} +900")
+  event_end_time =  event_date_time_detail[2].split('〜').last
+  reception_time = event_date_time_detail[3].gsub('受付時間：','')
     
   event_conditions = {}
   detail_page.search('//div[@id="party-body"]//div[@class="partyList-table"]/table').last.search('tr').each do |tr|
@@ -116,10 +111,7 @@ event_detail_pages.uniq.each do |detail_page_link|
       end
       p ctr.inner_text.gsub("〜\n",'〜').split(/['\n\n\n' '\n\n' '\n']/).compact.reject(&:blank?)
     end unless tr.at('td/table').nil?
-    
-    
   end
-  p event_conditions
   
   OtokonJapan.where(id: event_id).first_or_initialize.tap do |otokon| 
     otokon.id = event_id
@@ -159,6 +151,7 @@ event_detail_pages.uniq.each do |detail_page_link|
   end
   
   
-  p "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
   #exit
 end
+
+OtokonJapan.create_post
