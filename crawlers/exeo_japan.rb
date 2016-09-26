@@ -59,7 +59,7 @@ event_detail_pages.uniq.each do |detail_page_link|
   event_date_time = DateTime.parse(event_date_time)
   p event_date_time
   title = item_info.children.search('//div[@class="item-title"]').inner_text.strip
-  description = detail_page.search('//div[@itemprop="description"]/p').inner_text.strip.gsub(/w+/,'').gsub(/['\n','\r']/,'')
+  description = detail_page.search('//div[@itemprop="description"]/p').inner_text.strip #.gsub(/w+/,'').gsub(/['\n','\r']/,'')
   
   conditions = {}
   detail_page.search('//div[@class="item-info-body alfa"]/dl').each do |cond|
