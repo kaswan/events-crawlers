@@ -1,5 +1,7 @@
 class ExeoJapan < ActiveRecord::Base
   has_one :post, as: :parent
+  default_scope { order(updated_at: :desc) }
+    
   def self.create_post
     ExeoJapan.all.each  do |e|
       params = {}

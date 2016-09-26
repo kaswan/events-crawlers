@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to _('Edit'), edit_otokon_japan_path(@otokon_japan) %> |
+<%= link_to _('Back'), otokon_japans_path %>
+
 <p>
   <strong><%= _('Event url') %>:</strong>
   <%= @otokon_japan.event_url %>
@@ -11,8 +14,28 @@
 </p>
 
 <p>
+  <strong><%= _('Target people') %>:</strong>
+  <%= @otokon_japan.target_people %>
+</p>
+
+<p>
+  <strong><%= _('Title') %>:</strong>
+  <%= @otokon_japan.title %>
+</p>
+
+<p>
+  <strong><%= _('Description') %>:</strong>
+  <%= simple_format @otokon_japan.description %>
+</p>
+
+<p>
   <strong><%= _('Venue name') %>:</strong>
   <%= @otokon_japan.venue_name %>
+</p>
+
+<p>
+  <strong><%= _('Nearest station') %>:</strong>
+  <%= @otokon_japan.nearest_station %>
 </p>
 
 <p>
@@ -31,23 +54,44 @@
 </p>
 
 <p>
+  <strong><%= _('Access') %>:</strong>
+  <%= simple_format @otokon_japan.access %>
+</p>
+
+<p>
   <strong><%= _('Event date time') %>:</strong>
   <%= @otokon_japan.event_date_time %>
 </p>
 
 <p>
-  <strong><%= _('Title') %>:</strong>
-  <%= @otokon_japan.title %>
+  <strong><%= _('Event start time') %>:</strong>
+  <%= @otokon_japan.event_start_time %>
 </p>
 
 <p>
-  <strong><%= _('Description') %>:</strong>
-  <%= @otokon_japan.description %>
+  <strong><%= _('Event end time') %>:</strong>
+  <%= @otokon_japan.event_end_time %>
+</p>
+
+<p>
+  <strong><%= _('Reception time') %>:</strong>
+  <%= @otokon_japan.reception_time %>
+</p>
+
+
+<p>
+  <strong><%= _('Reservation limit for male') %>:</strong>
+  <%= @otokon_japan.reservation_limit_for_male %>
 </p>
 
 <p>
   <strong><%= _('Reservation state for male') %>:</strong>
   <%= @otokon_japan.reservation_state_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Reservation limit for female') %>:</strong>
+  <%= @otokon_japan.reservation_limit_for_female %>
 </p>
 
 <p>
@@ -63,6 +107,11 @@
 <p>
   <strong><%= _('Price for female') %>:</strong>
   <%= @otokon_japan.price_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Eligibility for all') %>:</strong>
+  <%= @otokon_japan.eligibility_for_all %>
 </p>
 
 <p>
@@ -87,7 +136,12 @@
 
 <p>
   <strong><%= _('Important reminder') %>:</strong>
-  <%= @otokon_japan.important_reminder %>
+  <%= simple_format @otokon_japan.important_reminder %>
+</p>
+
+<p>
+  <strong><%= _('Cancellation policy') %>:</strong>
+  <%= simple_format @otokon_japan.cancellation_policy %>
 </p>
 
 <p>

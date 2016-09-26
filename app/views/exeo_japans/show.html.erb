@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <strong><%= _('Title') %>:</strong>
+  <%= @exeo_japan.title %>
+</p>
+
+<p>
+  <strong><%= _('Description') %>:</strong>
+  <%= simple_format @exeo_japan.description %>
+</p>
+
+<p>
   <strong><%= _('Venue name') %>:</strong>
   <%= @exeo_japan.venue_name %>
 </p>
@@ -35,15 +45,6 @@
   <%= @exeo_japan.event_date_time %>
 </p>
 
-<p>
-  <strong><%= _('Title') %>:</strong>
-  <%= @exeo_japan.title %>
-</p>
-
-<p>
-  <strong><%= _('Description') %>:</strong>
-  <%= @exeo_japan.description %>
-</p>
 
 <p>
   <strong><%= _('Reservation state for male') %>:</strong>
@@ -87,7 +88,7 @@
 
 <p>
   <strong><%= _('Important reminder') %>:</strong>
-  <%= @exeo_japan.important_reminder %>
+  <%= simple_format @exeo_japan.important_reminder %>
 </p>
 
 <p>

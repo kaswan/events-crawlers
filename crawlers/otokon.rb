@@ -90,13 +90,13 @@ event_detail_pages.uniq.each do |detail_page_link|
       end
       if field == "年齢"
        age_limit = ctr.inner_text.gsub("〜\n",'〜').split(/['\n\n\n' '\n\n' '\n']/).compact.reject(&:blank?)
-       event_conditions['age_range_for_male'] = age_limit[1]
-       event_conditions['age_range_for_female'] = age_limit[3]
+       event_conditions['age_range_for_male'] = age_limit[1] if age_limit[1]
+       event_conditions['age_range_for_female'] = age_limit[3] if age_limit[3]
       end
       if field == "金額"
         price = ctr.inner_text.gsub("〜\n",'〜').split(/['\n\n\n' '\n\n' '\n']/).compact.reject(&:blank?)
-        event_conditions['price_for_male'] = price[1]
-        event_conditions['price_for_female'] = price[3]
+        event_conditions['price_for_male'] = price[1].gsub('&nbsp', ' ') if price[1]
+        event_conditions['price_for_female'] = price[3].gsub('&nbsp', ' ') if price[3]
       end
       if  field == "人数"
         limit = ctr.inner_text.gsub("〜\n",'〜').split(/['\n\n\n' '\n\n' '\n']/).compact.reject(&:blank?)
@@ -119,6 +119,7 @@ event_detail_pages.uniq.each do |detail_page_link|
     otokon.main_image_url = main_image_url
     otokon.prefecture_name = prefecture_name
     otokon.address = address
+    otokon.access = access
     otokon.title = title
     otokon.description = description
     otokon.important_reminder = important_reminder
@@ -132,20 +133,20 @@ event_detail_pages.uniq.each do |detail_page_link|
     otokon.reservation_state_for_female = reservation_state_for_female
     #conditions
     
-    otokon.venue_name = event_conditions['venue_name']
-    otokon.nearest_station = event_conditions['nearest_station']
-    otokon.price_for_male = event_conditions['price_for_male']
-    otokon.price_for_female = event_conditions['price_for_female']
+    otokon.venue_name = event_conditions['venue_name'] if event_conditions['venue_name']
+    otokon.nearest_station = event_conditions['nearest_station'] if event_conditions['nearest_station']
+    otokon.price_for_male = event_conditions['price_for_male'] if event_conditions['price_for_male']
+    otokon.price_for_female = event_conditions['price_for_female'] if event_conditions['price_for_female']
       
-    otokon.age_range_for_male = event_conditions['age_range_for_male']
-    otokon.age_range_for_female = event_conditions['age_range_for_female']
+    otokon.age_range_for_male = event_conditions['age_range_for_male'] if event_conditions['age_range_for_male']
+    otokon.age_range_for_female = event_conditions['age_range_for_female'] if event_conditions['age_range_for_female']
       
-    otokon.eligibility_for_all = event_conditions['eligibility_for_all']
-    otokon.eligibility_for_male = event_conditions['eligibility_for_male']
-    otokon.eligibility_for_female = event_conditions['eligibility_for_female']
+    otokon.eligibility_for_all = event_conditions['eligibility_for_all'] if event_conditions['eligibility_for_all']
+    otokon.eligibility_for_male = event_conditions['eligibility_for_male'] if event_conditions['eligibility_for_male']
+    otokon.eligibility_for_female = event_conditions['eligibility_for_female'] if event_conditions['eligibility_for_female']
       
-    otokon.reservation_limit_for_male = event_conditions['reservation_limit_for_male']
-    otokon.reservation_limit_for_female = event_conditions['reservation_limit_for_female']
+    otokon.reservation_limit_for_male = event_conditions['reservation_limit_for_male'] if event_conditions['reservation_limit_for_male']
+    otokon.reservation_limit_for_female = event_conditions['reservation_limit_for_female'] if event_conditions['reservation_limit_for_female']
       
     otokon.save  
   end

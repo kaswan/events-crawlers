@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: otona-cafe 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 10:11+0900\n"
-"PO-Revision-Date: 2016-09-14 10:11+0900\n"
+"POT-Creation-Date: 2016-09-26 14:56+0900\n"
+"PO-Revision-Date: 2016-09-26 14:56+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,6 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Access"
+msgstr ""
 
 msgid "Address"
 msgstr ""
@@ -36,10 +39,16 @@ msgstr ""
 msgid "CSV Download"
 msgstr ""
 
+msgid "Cancellation policy"
+msgstr ""
+
 msgid "Description"
 msgstr ""
 
 msgid "Edit"
+msgstr ""
+
+msgid "Eligibility for all"
 msgstr ""
 
 msgid "Eligibility for female"
@@ -52,6 +61,12 @@ msgid "Event ID"
 msgstr ""
 
 msgid "Event date time"
+msgstr ""
+
+msgid "Event end time"
+msgstr ""
+
+msgid "Event start time"
 msgstr ""
 
 msgid "Event url"
@@ -123,7 +138,184 @@ msgstr ""
 msgid "Main image url"
 msgstr ""
 
+msgid "Nearest station"
+msgstr ""
+
+msgid "Otokon japan"
+msgstr ""
+
+msgid "OtokonJapan|Access"
+msgstr ""
+
+msgid "OtokonJapan|Address"
+msgstr ""
+
+msgid "OtokonJapan|Age range for female"
+msgstr ""
+
+msgid "OtokonJapan|Age range for male"
+msgstr ""
+
+msgid "OtokonJapan|All images link"
+msgstr ""
+
+msgid "OtokonJapan|Cancellation policy"
+msgstr ""
+
+msgid "OtokonJapan|Description"
+msgstr ""
+
+msgid "OtokonJapan|Eligibility for all"
+msgstr ""
+
+msgid "OtokonJapan|Eligibility for female"
+msgstr ""
+
+msgid "OtokonJapan|Eligibility for male"
+msgstr ""
+
+msgid "OtokonJapan|Event date time"
+msgstr ""
+
+msgid "OtokonJapan|Event end time"
+msgstr ""
+
+msgid "OtokonJapan|Event start time"
+msgstr ""
+
+msgid "OtokonJapan|Event url"
+msgstr ""
+
+msgid "OtokonJapan|Important reminder"
+msgstr ""
+
+msgid "OtokonJapan|Main image url"
+msgstr ""
+
+msgid "OtokonJapan|Nearest station"
+msgstr ""
+
+msgid "OtokonJapan|Postalcode"
+msgstr ""
+
+msgid "OtokonJapan|Prefecture name"
+msgstr ""
+
+msgid "OtokonJapan|Price for female"
+msgstr ""
+
+msgid "OtokonJapan|Price for male"
+msgstr ""
+
+msgid "OtokonJapan|Reception time"
+msgstr ""
+
+msgid "OtokonJapan|Reservation limit for female"
+msgstr ""
+
+msgid "OtokonJapan|Reservation limit for male"
+msgstr ""
+
+msgid "OtokonJapan|Reservation state for female"
+msgstr ""
+
+msgid "OtokonJapan|Reservation state for male"
+msgstr ""
+
+msgid "OtokonJapan|Target people"
+msgstr ""
+
+msgid "OtokonJapan|Title"
+msgstr ""
+
+msgid "OtokonJapan|Venue name"
+msgstr ""
+
+msgid "Post"
+msgstr ""
+
+msgid "Post meta"
+msgstr ""
+
+msgid "PostMeta|Meta key"
+msgstr ""
+
+msgid "PostMeta|Meta value"
+msgstr ""
+
 msgid "Postalcode"
+msgstr ""
+
+msgid "Post|Comment count"
+msgstr ""
+
+msgid "Post|Comment status"
+msgstr ""
+
+msgid "Post|Guid"
+msgstr ""
+
+msgid "Post|Id"
+msgstr ""
+
+msgid "Post|Menu order"
+msgstr ""
+
+msgid "Post|Parent type"
+msgstr ""
+
+msgid "Post|Ping status"
+msgstr ""
+
+msgid "Post|Pinged"
+msgstr ""
+
+msgid "Post|Post author"
+msgstr ""
+
+msgid "Post|Post content"
+msgstr ""
+
+msgid "Post|Post content filtered"
+msgstr ""
+
+msgid "Post|Post date"
+msgstr ""
+
+msgid "Post|Post date gmt"
+msgstr ""
+
+msgid "Post|Post excerpt"
+msgstr ""
+
+msgid "Post|Post mime type"
+msgstr ""
+
+msgid "Post|Post modified"
+msgstr ""
+
+msgid "Post|Post modified gmt"
+msgstr ""
+
+msgid "Post|Post name"
+msgstr ""
+
+msgid "Post|Post parent"
+msgstr ""
+
+msgid "Post|Post password"
+msgstr ""
+
+msgid "Post|Post status"
+msgstr ""
+
+msgid "Post|Post title"
+msgstr ""
+
+msgid "Post|Post type"
+msgstr ""
+
+msgid "Post|To ping"
 msgstr ""
 
 msgid "Prefecture name"
@@ -135,6 +327,15 @@ msgstr ""
 msgid "Price for male"
 msgstr ""
 
+msgid "Reception time"
+msgstr ""
+
+msgid "Reservation limit for female"
+msgstr ""
+
+msgid "Reservation limit for male"
+msgstr ""
+
 msgid "Reservation state for female"
 msgstr ""
 
@@ -142,6 +343,27 @@ msgid "Reservation state for male"
 msgstr ""
 
 msgid "Show"
+msgstr ""
+
+msgid "Target people"
+msgstr ""
+
+msgid "Term"
+msgstr ""
+
+msgid "Term relation"
+msgstr ""
+
+msgid "TermRelation|Term order"
+msgstr ""
+
+msgid "Term|Name"
+msgstr ""
+
+msgid "Term|Slug"
+msgstr ""
+
+msgid "Term|Term group"
 msgstr ""
 
 msgid "Title"

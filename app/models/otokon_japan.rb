@@ -1,5 +1,7 @@
 class OtokonJapan < ActiveRecord::Base
   has_one :post, as: :parent
+  default_scope { order(updated_at: :desc) }
+    
   def self.create_post
     OtokonJapan.all.each  do |e|
       params = {}
@@ -57,6 +59,7 @@ class OtokonJapan < ActiveRecord::Base
       human_attribute_name(:event_url),
       human_attribute_name(:title),
       human_attribute_name(:description),
+      human_attribute_name(:target_people),
       human_attribute_name(:event_date_time),
       human_attribute_name(:event_start_time),
       human_attribute_name(:event_end_time),
@@ -66,6 +69,7 @@ class OtokonJapan < ActiveRecord::Base
       human_attribute_name(:postalcode),
       human_attribute_name(:prefecture_name),
       human_attribute_name(:address),
+      human_attribute_name(:access),
       human_attribute_name(:reservation_limit_for_male),
       human_attribute_name(:reservation_limit_for_female),
       human_attribute_name(:reservation_state_for_male),
@@ -90,6 +94,7 @@ class OtokonJapan < ActiveRecord::Base
       self.event_url,
       self.title,
       self.description,
+      self.target_people,
       self.event_date_time,
       self.event_start_time,
       self.event_end_time,
@@ -99,6 +104,7 @@ class OtokonJapan < ActiveRecord::Base
       self.postalcode,
       self.prefecture_name,
       self.address,
+      self.access,
       self.reservation_limit_for_male,
       self.reservation_limit_for_female,
       self.reservation_state_for_male,

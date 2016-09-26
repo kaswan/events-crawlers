@@ -17,6 +17,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "\n"
 
+msgid "Access"
+msgstr "アクセス"
+
 msgid "Address"
 msgstr "住所"
 
@@ -33,13 +36,19 @@ msgid "Back"
 msgstr "戻る"
 
 msgid "CSV Download"
-msgstr ""
+msgstr "CSVダウンロード"
+
+msgid "Cancellation policy"
+msgstr "キャンセル料について"
 
 msgid "Description"
 msgstr "イベント内容"
 
 msgid "Edit"
 msgstr "編集"
+
+msgid "Eligibility for all"
+msgstr "参加資格【共通】"
 
 msgid "Eligibility for female"
 msgstr "参加資格【女性】"
@@ -52,6 +61,12 @@ msgstr "イベントID"
 
 msgid "Event date time"
 msgstr "開催日時"
+
+msgid "Event end time"
+msgstr "終了時間"
+
+msgid "Event start time"
+msgstr "開始時間"
 
 msgid "Event url"
 msgstr "イベントURL"
@@ -122,8 +137,185 @@ msgstr "注意事項"
 msgid "Main image url"
 msgstr "メイン画像URL"
 
+msgid "Nearest station"
+msgstr "最寄り駅"
+
+msgid "Otokon japan"
+msgstr ""
+
+msgid "OtokonJapan|Access"
+msgstr "アクセス"
+
+msgid "OtokonJapan|Address"
+msgstr "住所"
+
+msgid "OtokonJapan|Age range for female"
+msgstr "対象年齢【女性】"
+
+msgid "OtokonJapan|Age range for male"
+msgstr "対象年齢【男性】"
+
+msgid "OtokonJapan|All images link"
+msgstr "画像リンク"
+
+msgid "OtokonJapan|Cancellation policy"
+msgstr "キャンセル料について"
+
+msgid "OtokonJapan|Description"
+msgstr "イベント内容"
+
+msgid "OtokonJapan|Eligibility for all"
+msgstr "参加資格【共通】"
+
+msgid "OtokonJapan|Eligibility for female"
+msgstr "参加資格【女性】"
+
+msgid "OtokonJapan|Eligibility for male"
+msgstr "参加資格【男性】"
+
+msgid "OtokonJapan|Event date time"
+msgstr "開催日時"
+
+msgid "OtokonJapan|Event end time"
+msgstr "終了時間"
+
+msgid "OtokonJapan|Event start time"
+msgstr "開始時間"
+
+msgid "OtokonJapan|Event url"
+msgstr "イベントURL"
+
+msgid "OtokonJapan|Important reminder"
+msgstr "注意事項"
+
+msgid "OtokonJapan|Main image url"
+msgstr "メイン画像URL"
+
+msgid "OtokonJapan|Nearest station"
+msgstr "最寄り駅"
+
+msgid "OtokonJapan|Postalcode"
+msgstr "郵便番号"
+
+msgid "OtokonJapan|Prefecture name"
+msgstr "県名"
+
+msgid "OtokonJapan|Price for female"
+msgstr "料金【女性】"
+
+msgid "OtokonJapan|Price for male"
+msgstr "料金【男性】"
+
+msgid "OtokonJapan|Reception time"
+msgstr "受付開始"
+
+msgid "OtokonJapan|Reservation limit for female"
+msgstr "人数条件【女性】"
+
+msgid "OtokonJapan|Reservation limit for male"
+msgstr "人数条件【男性】"
+
+msgid "OtokonJapan|Reservation state for female"
+msgstr "予約状況【女性】"
+
+msgid "OtokonJapan|Reservation state for male"
+msgstr "予約状況【男性】"
+
+msgid "OtokonJapan|Target people"
+msgstr "ターゲット"
+
+msgid "OtokonJapan|Title"
+msgstr "タイトル"
+
+msgid "OtokonJapan|Venue name"
+msgstr "開催場所"
+
+msgid "Post"
+msgstr ""
+
+msgid "Post meta"
+msgstr ""
+
+msgid "PostMeta|Meta key"
+msgstr ""
+
+msgid "PostMeta|Meta value"
+msgstr ""
+
 msgid "Postalcode"
 msgstr "郵便番号"
+
+msgid "Post|Comment count"
+msgstr ""
+
+msgid "Post|Comment status"
+msgstr ""
+
+msgid "Post|Guid"
+msgstr ""
+
+msgid "Post|Id"
+msgstr ""
+
+msgid "Post|Menu order"
+msgstr ""
+
+msgid "Post|Parent type"
+msgstr ""
+
+msgid "Post|Ping status"
+msgstr ""
+
+msgid "Post|Pinged"
+msgstr ""
+
+msgid "Post|Post author"
+msgstr ""
+
+msgid "Post|Post content"
+msgstr ""
+
+msgid "Post|Post content filtered"
+msgstr ""
+
+msgid "Post|Post date"
+msgstr ""
+
+msgid "Post|Post date gmt"
+msgstr ""
+
+msgid "Post|Post excerpt"
+msgstr ""
+
+msgid "Post|Post mime type"
+msgstr ""
+
+msgid "Post|Post modified"
+msgstr ""
+
+msgid "Post|Post modified gmt"
+msgstr ""
+
+msgid "Post|Post name"
+msgstr ""
+
+msgid "Post|Post parent"
+msgstr ""
+
+msgid "Post|Post password"
+msgstr ""
+
+msgid "Post|Post status"
+msgstr ""
+
+msgid "Post|Post title"
+msgstr ""
+
+msgid "Post|Post type"
+msgstr ""
+
+msgid "Post|To ping"
+msgstr ""
 
 msgid "Prefecture name"
 msgstr "県名"
@@ -134,6 +326,15 @@ msgstr "料金【女性】"
 msgid "Price for male"
 msgstr "料金【男性】"
 
+msgid "Reception time"
+msgstr "受付開始"
+
+msgid "Reservation limit for female"
+msgstr "人数条件【女性】"
+
+msgid "Reservation limit for male"
+msgstr "人数条件【男性】"
+
 msgid "Reservation state for female"
 msgstr "予約状況【女性】"
 
@@ -142,6 +343,27 @@ msgstr "予約状況【男性】"
 
 msgid "Show"
 msgstr "詳細"
+
+msgid "Target people"
+msgstr "ターゲット"
+
+msgid "Term"
+msgstr ""
+
+msgid "Term relation"
+msgstr ""
+
+msgid "TermRelation|Term order"
+msgstr ""
+
+msgid "Term|Name"
+msgstr ""
+
+msgid "Term|Slug"
+msgstr ""
+
+msgid "Term|Term group"
+msgstr ""
 
 msgid "Title"
 msgstr "タイトル"
