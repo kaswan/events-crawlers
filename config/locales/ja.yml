@@ -256,5 +256,32 @@ ja:
         age_range_for_female: '対象年齢【女性】'
         important_reminder: '注意事項'
         cancellation_policy: 'キャンセル料について'
-        all_images_link: "画像リンク"  
+        all_images_link: "画像リンク"
+      exeo_japan:
+        event_url: 'イベントURL'
+        main_image_url: 'メイン画像URL'
+        venue_name: '会場名'
+        nearest_station: '最寄り駅'
+        postalcode: '郵便番号'
+        prefecture_name: '県名'
+        address: '住所'
+        event_date_time: '開催日時'
+        title: 'タイトル'
+        description: '詳細'
+        reservation_state_for_male: '予約状況【男性】'
+        reservation_state_for_female: '予約状況【女性】'
+        price_for_male: '料金【男性】'
+        price_for_female: '料金【女性】'
+        eligibility_for_male: '参加資格【男性】'
+        eligibility_for_female: '参加資格【女性】'
+        age_range_for_male: '対象年齢【男性】'
+        age_range_for_female: '対象年齢【女性】'
+        personal_document: '持ち物'
+        food_drink: 'Food & Drink'
+        event_dress_code: '服装'
+        cancellation_deadline: 'キャンセル締切'
+        contact_info: '連絡先'
+        gathering_place: '集合'
+        important_reminder: '注意事項'
+        all_images_link: "画像リンク"    
       

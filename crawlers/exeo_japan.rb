@@ -15,22 +15,24 @@ event_detail_pages = []
 result.search('//div[@class="pv-contents"]//a').select{|link| link[:href] && link[:href].match(/ex_schedule/)}.each do |link|
   event_detail_pages << link[:href]
 end
-next_page = result.search('//span[@class="page-controler"]//a').select{|link| link[:href] && link[:class] == 'next'}.first[:href]
-    
-begin  
-    
-  p "#####################################################"
-  p result.search('//span[@class="pages"]').inner_text
-  p "#####################################################"
-    
-  result = result.link_with(:href => next_page).click
-  result.search('//div[@class="pv-contents"]//a').select{|link| link[:href] && link[:href].match(/ex_schedule/)}.each do |link|
-    event_detail_pages << link[:href]
-  end   
-  next_page = result.search('//span[@class="page-controler"]//a').select{|link| link && link[:href] && link[:class] == 'next'} 
-  next_page = next_page.first[:href] unless next_page.blank?
-     
-end while !next_page.blank?
+next_page = result.search('//span[@class="page-controler"]//a').select{|link| link && link[:href] && link[:class] == 'next'} 
+unless next_page.blank?
+  next_page = next_page.first[:href] 
+  begin  
+      
+    p "#####################################################"
+    p result.search('//span[@class="pages"]').inner_text
+    p "#####################################################"
+      
+    result = result.link_with(:href => next_page).click
+    result.search('//div[@class="pv-contents"]//a').select{|link| link[:href] && link[:href].match(/ex_schedule/)}.each do |link|
+      event_detail_pages << link[:href]
+    end   
+    next_page = result.search('//span[@class="page-controler"]//a').select{|link| link && link[:href] && link[:class] == 'next'} 
+    next_page = next_page.first[:href] unless next_page.blank?
+       
+  end while !next_page.blank?
+end
 p event_detail_pages.uniq.count
   
 event_detail_pages.uniq.each do |detail_page_link|
@@ -90,44 +92,48 @@ event_detail_pages.uniq.each do |detail_page_link|
       end
     end
   end
-  p qualifications
-  
-  ExeoJapan.where(id: event_id).first_or_initialize.tap do |exeo| 
-    exeo.id = event_id
-    exeo.event_url = event_url
-    exeo.main_image_url = main_image_url
-    exeo.all_images_link = all_images_link.join(',')
-    exeo.venue_name = venue_name
-    exeo.postalcode = postalcode.gsub('〒','')
-    exeo.prefecture_name = prefecture_name
-    exeo.address = address 
-    exeo.event_date_time = event_date_time
-    exeo.title = title
-    exeo.description = description
-    conditions.values.each do |condition|
-      if condition['type'].join == "予約状況"
-        exeo.reservation_state_for_male = condition['male'].join if condition['male']
-        exeo.reservation_state_for_female = condition['female'].join if condition['female']
-      elsif condition['type'].join == "料　　金"
-        exeo.price_for_male = condition['male'].join if condition['male']
-        exeo.price_for_female = condition['female'].join if condition['female']
+
+  begin  
+    ExeoJapan.transaction do  
+      ExeoJapan.where(id: event_id).first_or_initialize.tap do |exeo| 
+        exeo.id = event_id
+        exeo.event_url = event_url
+        exeo.main_image_url = main_image_url
+        exeo.all_images_link = all_images_link.join(',')
+        exeo.venue_name = venue_name
+        exeo.postalcode = postalcode.gsub('〒','')
+        exeo.prefecture_name = prefecture_name
+        exeo.address = address 
+        exeo.event_date_time = event_date_time
+        exeo.title = title
+        exeo.description = description
+        conditions.values.each do |condition|
+          if condition['type'].join == "予約状況"
+            exeo.reservation_state_for_male = condition['male'].join if condition['male']
+            exeo.reservation_state_for_female = condition['female'].join if condition['female']
+          elsif condition['type'].join == "料　　金"
+            exeo.price_for_male = condition['male'].join if condition['male']
+            exeo.price_for_female = condition['female'].join if condition['female']
+          end
+        end
+        
+        qualifications.values.each do |qualification|
+          if qualification['type'].join == "参加資格"
+            exeo.eligibility_for_male = qualification['male'].join if qualification['male']
+            exeo.eligibility_for_female = qualification['female'].join if qualification['female']
+          elsif qualification['type'].join == "対象年齢"
+            exeo.age_range_for_male = qualification['male'].join if qualification['male']
+            exeo.age_range_for_female = qualification['female'].join if qualification['female']          
+          elsif qualification['type'].join == "注意事項"
+            exeo.important_reminder = qualification['other'].join if qualification['other']
+          end
+        end
+        exeo.save
       end
     end
-    
-    qualifications.values.each do |qualification|
-      if qualification['type'].join == "参加資格"
-        exeo.eligibility_for_male = qualification['male'].join if qualification['male']
-        exeo.eligibility_for_female = qualification['female'].join if qualification['female']
-      elsif qualification['type'].join == "対象年齢"
-        exeo.age_range_for_male = qualification['male'].join if qualification['male']
-        exeo.age_range_for_female = qualification['female'].join if qualification['female']          
-      elsif qualification['type'].join == "注意事項"
-        exeo.important_reminder = qualification['other'].join if qualification['other']
-      end
-    end
-    exeo.save
-  end
-    
+  rescue Exception => e
+    p e.backtrace.join("\n")    
+  end    
   #exit
 end
 

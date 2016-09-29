@@ -1,0 +1,2 @@
+module OtokonJapansHelper
+end

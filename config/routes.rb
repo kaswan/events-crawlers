@@ -9,6 +9,11 @@ Rails.application.routes.draw do
       get :csv_download
     end
   end
+  resources :party_japans do
+    collection do
+      get :csv_download
+    end
+  end
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

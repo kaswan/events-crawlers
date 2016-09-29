@@ -38,8 +38,14 @@ msgstr "戻る"
 msgid "CSV Download"
 msgstr "CSVダウンロード"
 
+msgid "Cancellation deadline"
+msgstr "キャンセル締切"
+
 msgid "Cancellation policy"
 msgstr "キャンセル料について"
+
+msgid "Contact info"
+msgstr "連絡先"
 
 msgid "Description"
 msgstr "イベント内容"
@@ -61,6 +67,9 @@ msgstr "イベントID"
 
 msgid "Event date time"
 msgstr "開催日時"
+
+msgid "Event dress code"
+msgstr "服装"
 
 msgid "Event end time"
 msgstr "終了時間"
@@ -130,6 +139,12 @@ msgstr "タイトル"
 
 msgid "ExeoJapan|Venue name"
 msgstr "開催場所"
+
+msgid "Food drink"
+msgstr "Food & Drink"
+
+msgid "Gathering place"
+msgstr "集合"
 
 msgid "Important reminder"
 msgstr "注意事項"
@@ -229,6 +244,90 @@ msgstr "タイトル"
 
 msgid "OtokonJapan|Venue name"
 msgstr "開催場所"
+
+msgid "Party japan"
+msgstr ""
+
+msgid "PartyJapan|Address"
+msgstr "住所"
+
+msgid "PartyJapan|Age range for female"
+msgstr "対象年齢【女性】"
+
+msgid "PartyJapan|Age range for male"
+msgstr "対象年齢【男性】"
+
+msgid "PartyJapan|All images link"
+msgstr "画像リンク"
+
+msgid "PartyJapan|Cancellation deadline"
+msgstr "キャンセル締切"
+
+msgid "PartyJapan|Contact info"
+msgstr "連絡先"
+
+msgid "PartyJapan|Description"
+msgstr "イベント内容"
+
+msgid "PartyJapan|Eligibility for female"
+msgstr "参加資格【女性】"
+
+msgid "PartyJapan|Eligibility for male"
+msgstr "参加資格【男性】"
+
+msgid "PartyJapan|Event date time"
+msgstr "開催日時"
+
+msgid "PartyJapan|Event dress code"
+msgstr "服装"
+
+msgid "PartyJapan|Event url"
+msgstr "イベントURL"
+
+msgid "PartyJapan|Food drink"
+msgstr "Food & Drink"
+
+msgid "PartyJapan|Gathering place"
+msgstr "集合"
+
+msgid "PartyJapan|Important reminder"
+msgstr "注意事項"
+
+msgid "PartyJapan|Main image url"
+msgstr "メイン画像URL"
+
+msgid "PartyJapan|Nearest station"
+msgstr "最寄り駅"
+
+msgid "PartyJapan|Personal document"
+msgstr "持ち物"
+
+msgid "PartyJapan|Postalcode"
+msgstr "郵便番号"
+
+msgid "PartyJapan|Prefecture name"
+msgstr "県名"
+
+msgid "PartyJapan|Price for female"
+msgstr "料金【女性】"
+
+msgid "PartyJapan|Price for male"
+msgstr "料金【男性】"
+
+msgid "PartyJapan|Reservation state for female"
+msgstr "予約状況【女性】"
+
+msgid "PartyJapan|Reservation state for male"
+msgstr "予約状況【男性】"
+
+msgid "PartyJapan|Title"
+msgstr "タイトル"
+
+msgid "PartyJapan|Venue name"
+msgstr "開催場所"
+
+msgid "Personal document"
+msgstr "持ち物"
 
 msgid "Post"
 msgstr ""
@@ -367,6 +466,9 @@ msgstr ""
 
 msgid "Title"
 msgstr "タイトル"
+
+msgid "Updated at"
+msgstr ""
 
 msgid "Venue name"
 msgstr "開催場所"

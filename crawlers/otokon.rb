@@ -9,20 +9,21 @@ event_detail_pages = []
 page.search('//ul//h3//a').select{|link| link[:href] && link[:href].match(/detail.html/)}.each do |link|
   event_detail_pages << link[:href]
 end
-
-next_page = page.search('//p[@class="pager"]//span//a').select{|link| link[:href] && link.inner_text == "次の10件>" }.first[:href]
-begin
-  p "#####################################################"
-  p next_page
-  p "#####################################################"
-  page = page.link_with(:href => next_page).click
-  page.search('//ul//h3//a').select{|link| link[:href] && link[:href].match(/detail.html/)}.each do |link|
-    event_detail_pages << link[:href]
-  end
-  next_page = page.search('//p[@class="pager"]//span//a').select{|link| link[:href] && link.inner_text == "次の10件>" }
-  next_page = next_page.first[:href] unless next_page.blank?
-end while !next_page.blank?
-
+next_page = page.search('//p[@class="pager"]//span//a').select{|link| link[:href] && link.inner_text == "次の10件>" }
+unless next_page.blank?
+  next_page = next_page.first[:href] 
+  begin
+    p "#####################################################"
+    p next_page
+    p "#####################################################"
+    page = page.link_with(:href => next_page).click
+    page.search('//ul//h3//a').select{|link| link[:href] && link[:href].match(/detail.html/)}.each do |link|
+      event_detail_pages << link[:href]
+    end
+    next_page = page.search('//p[@class="pager"]//span//a').select{|link| link[:href] && link.inner_text == "次の10件>" }
+    next_page = next_page.first[:href] unless next_page.blank?
+  end while !next_page.blank?
+end
 p event_detail_pages.size
 #event_detail_pages << "/party/detail.html$/party_id/10582/"
 event_detail_pages.uniq.each do |detail_page_link|
@@ -45,21 +46,21 @@ event_detail_pages.uniq.each do |detail_page_link|
   access = ""
   detail_page.search('//div[@class="cont-wrap"]/dl').each do |cont|
     address = cont.search('//dd').first.inner_text.strip
-    if address.split(/['県']/).size > 1
-      prefecture_name = address.split(/['県']/).first
-    elsif address.split(/['府']/).size > 1
-      prefecture_name = address.split(/['府']/).first
-    elsif address.split(/['都']/).size > 1
-      prefecture_name = address.split(/['都']/).first
-    elsif address.split(/['区']/).size > 1 && address.split(/['区']/).first.strip == "新宿"
-      prefecture_name = "東京"
-    elsif address.split(/['市']/).size > 1 && address.split(/['市']/).first.strip == "名古屋"
-      prefecture_name = "愛知"
-    elsif address.split('海道').size > 1 && address.split('海道').first.strip == "北"
-      prefecture_name = "北海道"
-    else
-      prefecture_name = " "
-    end
+    unless address.nil?
+      if address.split(/['県']/).size > 1
+        prefecture_name = address.split(/['県']/).first
+      elsif address.split(/['府']/).size > 1
+        prefecture_name = address.split(/['府']/).first
+      elsif address.split(/['都']/).size > 1
+        prefecture_name = address.split(/['都']/).first
+      elsif address.split(/['区']/).size > 1 && ["千代田","中央","港","新宿","文京","台東","墨田","江東","品川","目黒","大田","世田谷","渋谷","中野","杉並","豊島","北","荒川","板橋","練馬","足立","葛飾","江戸川"].include?(address.split(/['区']/).first.strip)
+        prefecture_name = "東京"
+      elsif address.split(/['市']/).size > 1 && address.split(/['市']/).first.strip == "名古屋"
+        prefecture_name = "愛知"
+      elsif address.split('海道').size > 1 && address.split('海道').first.strip == "北"
+        prefecture_name = "北海道"
+      end
+    end  
     access = cont.search('//dd').last.inner_text.strip
   end
   
@@ -113,44 +114,49 @@ event_detail_pages.uniq.each do |detail_page_link|
     end unless tr.at('td/table').nil?
   end
   
-  OtokonJapan.where(id: event_id).first_or_initialize.tap do |otokon| 
-    otokon.id = event_id
-    otokon.event_url = event_url
-    otokon.main_image_url = main_image_url
-    otokon.prefecture_name = prefecture_name
-    otokon.address = address
-    otokon.access = access
-    otokon.title = title
-    otokon.description = description
-    otokon.important_reminder = important_reminder
-    otokon.cancellation_policy = cancellation_policy
-    otokon.event_date_time = event_date_time
-    otokon.event_start_time = event_start_time
-    otokon.event_end_time = event_end_time
-    otokon.reception_time = reception_time
-    otokon.target_people = target_people
-    otokon.reservation_state_for_male = reservation_state_for_male
-    otokon.reservation_state_for_female = reservation_state_for_female
-    #conditions
-    
-    otokon.venue_name = event_conditions['venue_name'] if event_conditions['venue_name']
-    otokon.nearest_station = event_conditions['nearest_station'] if event_conditions['nearest_station']
-    otokon.price_for_male = event_conditions['price_for_male'] if event_conditions['price_for_male']
-    otokon.price_for_female = event_conditions['price_for_female'] if event_conditions['price_for_female']
-      
-    otokon.age_range_for_male = event_conditions['age_range_for_male'] if event_conditions['age_range_for_male']
-    otokon.age_range_for_female = event_conditions['age_range_for_female'] if event_conditions['age_range_for_female']
-      
-    otokon.eligibility_for_all = event_conditions['eligibility_for_all'] if event_conditions['eligibility_for_all']
-    otokon.eligibility_for_male = event_conditions['eligibility_for_male'] if event_conditions['eligibility_for_male']
-    otokon.eligibility_for_female = event_conditions['eligibility_for_female'] if event_conditions['eligibility_for_female']
-      
-    otokon.reservation_limit_for_male = event_conditions['reservation_limit_for_male'] if event_conditions['reservation_limit_for_male']
-    otokon.reservation_limit_for_female = event_conditions['reservation_limit_for_female'] if event_conditions['reservation_limit_for_female']
-      
-    otokon.save  
+  begin  
+    OtokonJapan.transaction do  
+      OtokonJapan.where(id: event_id).first_or_initialize.tap do |otokon| 
+        otokon.id = event_id
+        otokon.event_url = event_url
+        otokon.main_image_url = main_image_url
+        otokon.prefecture_name = prefecture_name
+        otokon.address = address
+        otokon.access = access
+        otokon.title = title
+        otokon.description = description
+        otokon.important_reminder = important_reminder
+        otokon.cancellation_policy = cancellation_policy
+        otokon.event_date_time = event_date_time
+        otokon.event_start_time = event_start_time
+        otokon.event_end_time = event_end_time
+        otokon.reception_time = reception_time
+        otokon.target_people = target_people
+        otokon.reservation_state_for_male = reservation_state_for_male
+        otokon.reservation_state_for_female = reservation_state_for_female
+        #conditions
+        
+        otokon.venue_name = event_conditions['venue_name'] if event_conditions['venue_name']
+        otokon.nearest_station = event_conditions['nearest_station'] if event_conditions['nearest_station']
+        otokon.price_for_male = event_conditions['price_for_male'] if event_conditions['price_for_male']
+        otokon.price_for_female = event_conditions['price_for_female'] if event_conditions['price_for_female']
+          
+        otokon.age_range_for_male = event_conditions['age_range_for_male'] if event_conditions['age_range_for_male']
+        otokon.age_range_for_female = event_conditions['age_range_for_female'] if event_conditions['age_range_for_female']
+          
+        otokon.eligibility_for_all = event_conditions['eligibility_for_all'] if event_conditions['eligibility_for_all']
+        otokon.eligibility_for_male = event_conditions['eligibility_for_male'] if event_conditions['eligibility_for_male']
+        otokon.eligibility_for_female = event_conditions['eligibility_for_female'] if event_conditions['eligibility_for_female']
+          
+        otokon.reservation_limit_for_male = event_conditions['reservation_limit_for_male'] if event_conditions['reservation_limit_for_male']
+        otokon.reservation_limit_for_female = event_conditions['reservation_limit_for_female'] if event_conditions['reservation_limit_for_female']
+          
+        otokon.save  
+      end
+    end
+  rescue Exception => e
+    p e.backtrace.join("\n")    
   end
-  
   
   #exit
 end

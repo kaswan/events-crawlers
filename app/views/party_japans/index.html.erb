@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+<h1>Party Japans(<%= @party_japans.size %>件)</h1>
+<%= link_to _('CSV Download'), csv_download_party_japans_path %> |
+<%= link_to _('Back'), root_path %>
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th><%= _('Event ID') %></th>
+      <th><%= _('Title') %></th>
+      <th><%= _('Venue name') %></th>
+      <th><%= _('Postalcode') %></th>
+      <th><%= _('Prefecture name') %></th>
+      <th><%= _('Address') %></th>
+      <th><%= _('Event date time') %></th>      
+      <th><%= _('Reservation state for male') %></th>
+      <th><%= _('Reservation state for female') %></th>
+      <th><%= _('Price for male') %></th>
+      <th><%= _('Price for female') %></th>
+      <th><%= _('Eligibility for male') %></th>
+      <th><%= _('Eligibility for female') %></th>
+      <th><%= _('Age range for male') %></th>
+      <th><%= _('Age range for female') %></th>
+      <th><%= _('Updated at') %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @party_japans.each do |party_japan| %>
+      <tr>
+        <td><%= link_to party_japan.id, party_japan.event_url, {target: '_blank'} %></td>
+        <td><%= party_japan.title %></td>
+        <td><%= party_japan.venue_name %></td>
+        <td><%= party_japan.postalcode %></td>
+        <td><%= party_japan.prefecture_name %></td>
+        <td><%= party_japan.address %></td>
+        <td><%= party_japan.event_date_time %></td>        
+        <td><%= party_japan.reservation_state_for_male %></td>
+        <td><%= party_japan.reservation_state_for_female %></td>
+        <td><%= party_japan.price_for_male %></td>
+        <td><%= party_japan.price_for_female %></td>
+        <td><%= party_japan.eligibility_for_male %></td>
+        <td><%= party_japan.eligibility_for_female %></td>
+        <td><%= party_japan.age_range_for_male %></td>
+        <td><%= party_japan.age_range_for_female %></td>
+        <td><%= l party_japan.updated_at, format: :short %></td>
+        <td><%= link_to _('Show'), party_japan %></td>
+        <td><%= link_to _('Edit'), edit_party_japan_path(party_japan) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to _('Back'), root_path %>
+<%#= link_to 'New Party japan', new_party_japan_path %>

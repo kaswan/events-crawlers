@@ -1,0 +1,1 @@
+json.partial! "party_japans/party_japan", party_japan: @party_japan

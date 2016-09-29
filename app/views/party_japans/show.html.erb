@@ -1,0 +1,134 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= _('Event url') %>:</strong>
+  <%= @party_japan.event_url %>
+</p>
+
+<p>
+  <strong><%= _('Main image url') %>:</strong>
+  <%= @party_japan.main_image_url %>
+</p>
+
+<p>
+  <strong><%= _('Title') %>:</strong>
+  <%= @party_japan.title %>
+</p>
+
+<p>
+  <strong><%= _('Description') %>:</strong>
+  <%= simple_format @party_japan.description %>
+</p>
+
+<p>
+  <strong><%= _('Venue name') %>:</strong>
+  <%= @party_japan.venue_name %>
+</p>
+
+<p>
+  <strong><%= _('Nearest station') %>:</strong>
+  <%= @party_japan.nearest_station %>
+</p>
+
+<p>
+  <strong><%= _('Postalcode') %>:</strong>
+  <%= @party_japan.postalcode %>
+</p>
+
+<p>
+  <strong><%= _('Prefecture name') %>:</strong>
+  <%= @party_japan.prefecture_name %>
+</p>
+
+<p>
+  <strong><%= _('Address') %>:</strong>
+  <%= @party_japan.address %>
+</p>
+
+<p>
+  <strong><%= _('Event date time') %>:</strong>
+  <%= @party_japan.event_date_time %>
+</p>
+
+<p>
+  <strong><%= _('Cancellation deadline') %>:</strong>
+  <%= @party_japan.cancellation_deadline %>
+</p>
+
+<p>
+  <strong><%= _('Reservation state for male') %>:</strong>
+  <%= @party_japan.reservation_state_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Reservation state for female') %>:</strong>
+  <%= @party_japan.reservation_state_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Price for male') %>:</strong>
+  <%= @party_japan.price_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Price for female') %>:</strong>
+  <%= @party_japan.price_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Eligibility for male') %>:</strong>
+  <%= @party_japan.eligibility_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Eligibility for female') %>:</strong>
+  <%= @party_japan.eligibility_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Age range for male') %>:</strong>
+  <%= @party_japan.age_range_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Age range for female') %>:</strong>
+  <%= @party_japan.age_range_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Personal document') %>:</strong>
+  <%= @party_japan.personal_document %>
+</p>
+
+<p>
+  <strong><%= _('Food drink') %>:</strong>
+  <%= @party_japan.food_drink %>
+</p>
+
+<p>
+  <strong><%= _('Event dress code') %>:</strong>
+  <%= @party_japan.event_dress_code %>
+</p>
+
+<p>
+  <strong><%= _('Contact info') %>:</strong>
+  <%= @party_japan.contact_info %>
+</p>
+
+<p>
+  <strong><%= _('Gathering place') %>:</strong>
+  <%= @party_japan.gathering_place %>
+</p>
+
+<p>
+  <strong><%= _('Important reminder') %>:</strong>
+  <%= simple_format @party_japan.important_reminder %>
+</p>
+
+<p>
+  <strong><%= _('All images link') %>:</strong>
+  <%= @party_japan.all_images_link %>
+</p>
+
+<%= link_to _('Edit'), edit_party_japan_path(@party_japan) %> |
+<%= link_to _('Back'), party_japans_path %>

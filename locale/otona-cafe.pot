@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: otona-cafe 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 14:56+0900\n"
-"PO-Revision-Date: 2016-09-26 14:56+0900\n"
+"POT-Creation-Date: 2016-09-29 16:51+0900\n"
+"PO-Revision-Date: 2016-09-29 16:51+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -39,7 +39,13 @@ msgstr ""
 msgid "CSV Download"
 msgstr ""
 
+msgid "Cancellation deadline"
+msgstr ""
+
 msgid "Cancellation policy"
+msgstr ""
+
+msgid "Contact info"
 msgstr ""
 
 msgid "Description"
@@ -61,6 +67,9 @@ msgid "Event ID"
 msgstr ""
 
 msgid "Event date time"
+msgstr ""
+
+msgid "Event dress code"
 msgstr ""
 
 msgid "Event end time"
@@ -130,6 +139,12 @@ msgid "ExeoJapan|Title"
 msgstr ""
 
 msgid "ExeoJapan|Venue name"
+msgstr ""
+
+msgid "Food drink"
+msgstr ""
+
+msgid "Gathering place"
 msgstr ""
 
 msgid "Important reminder"
@@ -229,6 +244,90 @@ msgid "OtokonJapan|Title"
 msgstr ""
 
 msgid "OtokonJapan|Venue name"
+msgstr ""
+
+msgid "Party japan"
+msgstr ""
+
+msgid "PartyJapan|Address"
+msgstr ""
+
+msgid "PartyJapan|Age range for female"
+msgstr ""
+
+msgid "PartyJapan|Age range for male"
+msgstr ""
+
+msgid "PartyJapan|All images link"
+msgstr ""
+
+msgid "PartyJapan|Cancellation deadline"
+msgstr ""
+
+msgid "PartyJapan|Contact info"
+msgstr ""
+
+msgid "PartyJapan|Description"
+msgstr ""
+
+msgid "PartyJapan|Eligibility for female"
+msgstr ""
+
+msgid "PartyJapan|Eligibility for male"
+msgstr ""
+
+msgid "PartyJapan|Event date time"
+msgstr ""
+
+msgid "PartyJapan|Event dress code"
+msgstr ""
+
+msgid "PartyJapan|Event url"
+msgstr ""
+
+msgid "PartyJapan|Food drink"
+msgstr ""
+
+msgid "PartyJapan|Gathering place"
+msgstr ""
+
+msgid "PartyJapan|Important reminder"
+msgstr ""
+
+msgid "PartyJapan|Main image url"
+msgstr ""
+
+msgid "PartyJapan|Nearest station"
+msgstr ""
+
+msgid "PartyJapan|Personal document"
+msgstr ""
+
+msgid "PartyJapan|Postalcode"
+msgstr ""
+
+msgid "PartyJapan|Prefecture name"
+msgstr ""
+
+msgid "PartyJapan|Price for female"
+msgstr ""
+
+msgid "PartyJapan|Price for male"
+msgstr ""
+
+msgid "PartyJapan|Reservation state for female"
+msgstr ""
+
+msgid "PartyJapan|Reservation state for male"
+msgstr ""
+
+msgid "PartyJapan|Title"
+msgstr ""
+
+msgid "PartyJapan|Venue name"
+msgstr ""
+
+msgid "Personal document"
 msgstr ""
 
 msgid "Post"
@@ -367,6 +466,9 @@ msgid "Term|Term group"
 msgstr ""
 
 msgid "Title"
+msgstr ""
+
+msgid "Updated at"
 msgstr ""
 
 msgid "Venue name"

@@ -1,0 +1,1 @@
+json.array! @party_japans, partial: 'party_japans/party_japan', as: :party_japan
