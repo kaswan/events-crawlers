@@ -5,7 +5,7 @@ class PartyJapan < ActiveRecord::Base
   def self.create_post
     PartyJapan.all.each  do |e|
       params = {}
-      params[:post] = {:post_title => e.title, :post_content => "https://track.affiliate-b.com/visit.php?guid=ON&a=W3279W-y639553&p=t4956890", :guid => ""}
+      params[:post] = {:post_title => e.title, :post_content => '<a href="https://track.affiliate-b.com/visit.php?guid=ON&a=W3279W-y639553&p=t4956890" target="_blank" rel="nofollow">毎週開催の★人気婚活パーティーなら！</a><img src="https://track.affiliate-b.com/lead/W3279W/t4956890/y639553" width="1" height="1" style="border:none;"/>', :guid => ""}
       if e.post
         post = e.post
       else
