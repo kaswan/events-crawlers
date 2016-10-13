@@ -5,7 +5,7 @@ class PartyJapan < ActiveRecord::Base
   def self.create_post
     PartyJapan.all.each  do |e|
       params = {}
-      params[:post] = {:post_title => e.title, :post_content => e.event_url, :guid => ""}
+      params[:post] = {:post_title => e.title, :post_content => "https://track.affiliate-b.com/visit.php?guid=ON&a=W3279W-y639553&p=t4956890", :guid => ""}
       if e.post
         post = e.post
       else
