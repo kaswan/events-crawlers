@@ -7,9 +7,9 @@ page = agent.get("https://www.partyparty.jp")
 
 form =  page.form_with(:id => 'partySearchForm')
 event_detail_pages = []
-%w(50 55 60 65 70).each do |age|
-  form.field_with(:name => 'mal_age').value = age
-  form.field_with(:name => 'fem_age').value = age.to_i - 10
+#%w(20 25 30 35 40 45 50 55 60 65 70).each do |age|
+  #form.field_with(:name => 'mal_age').value = age
+  #form.field_with(:name => 'fem_age').value = age.to_i - 10
   result =  form.submit(form.button_with(:name => 'partySearch'))    
   
   result.search('//div[@class="search-section"]//a').select{|link| link[:href] && link[:href].match(/party-detail/)}.each do |link|
@@ -30,7 +30,7 @@ event_detail_pages = []
       next_page = next_page.first[:href] unless next_page.blank?
     end while !next_page.blank?
   end
-end
+#end
 p event_detail_pages
 
 p event_detail_pages.uniq.count  

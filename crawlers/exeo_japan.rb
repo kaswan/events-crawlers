@@ -8,7 +8,7 @@ page = agent.get("http://www.exeo-japan.co.jp/ex_schedule/")
 form =  page.form_with(:name => 'searchMore')
 
 form.checkboxes_with(:name => /area/).each{|sub_area| sub_area.check}
-form.checkboxes_with(:name => /plan/).each{|plan| plan.check if [4,5,41].include?(plan.value.to_i)}
+form.checkboxes_with(:name => /plan/).each{|plan| plan.check if [1,2,3,4,5,41].include?(plan.value.to_i)}
   
 result =  form.submit(form.button_with(:class => /orange/))
 event_detail_pages = []

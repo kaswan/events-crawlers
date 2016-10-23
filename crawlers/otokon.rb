@@ -3,8 +3,8 @@ require 'csv'
 agent ||= Mechanize.new
 agent.user_agent = 'Mozilla/5.0 (Windows NT 5.1; rv:23.0) Gecko/20100101 Firefox/23.0'
 web_site_url = "http://www.otocon.jp"
-page = agent.get("http://www.otocon.jp/search/?/m=50/w=50/")
-
+#page = agent.get("http://www.otocon.jp/search/?/m=50/w=50/")
+page = agent.get("http://www.otocon.jp/search/")
 event_detail_pages = []
 page.search('//ul//h3//a').select{|link| link[:href] && link[:href].match(/detail.html/)}.each do |link|
   event_detail_pages << link[:href]
