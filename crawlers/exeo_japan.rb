@@ -137,4 +137,4 @@ event_detail_pages.uniq.each do |detail_page_link|
   #exit
 end
 
-ExeoJapan.create_post
+#ExeoJapan.create_post

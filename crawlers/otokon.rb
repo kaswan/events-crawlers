@@ -59,6 +59,8 @@ event_detail_pages.uniq.each do |detail_page_link|
         prefecture_name = "愛知"
       elsif address.split('海道').size > 1 && address.split('海道').first.strip == "北"
         prefecture_name = "北海道"
+      elsif address.split(/['市']/).size > 1 && address.split(/['市']/).first.strip == "札幌"
+              prefecture_name = "北海道"  
       end
     end  
     access = cont.search('//dd').last.inner_text.strip
@@ -161,4 +163,4 @@ event_detail_pages.uniq.each do |detail_page_link|
   #exit
 end
 
-OtokonJapan.create_post
+#OtokonJapan.create_post

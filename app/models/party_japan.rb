@@ -1,52 +1,58 @@
 class PartyJapan < ActiveRecord::Base
   has_one :post, as: :parent
   default_scope { order(updated_at: :desc) }
-    
+  after_create :create_or_update_post
+  after_update :create_or_update_post
+  
   def self.create_post
     PartyJapan.all.each  do |e|
-      params = {}
-      params[:post] = {:post_title => e.title, :post_content => '<a href="https://track.affiliate-b.com/visit.php?guid=ON&a=W3279W-y639553&p=t4956890" target="_blank" rel="nofollow">毎週開催の★人気婚活パーティーなら！</a><img src="https://track.affiliate-b.com/lead/W3279W/t4956890/y639553" width="1" height="1" style="border:none;"/>', :guid => ""}
-      if e.post
-        post = e.post
-      else
-        post = e.build_post(params[:post])
-      end
-      post.post_metas.destroy_all unless post.post_metas.blank?
-      post.post_metas.build(:meta_key => 'ev_id', :meta_value => e.id)
-      post.post_metas.build(:meta_key => 'event_img_url', :meta_value => e.main_image_url)
-      post.post_metas.build(:meta_key => 'event_space', :meta_value => e.venue_name)
-      post.post_metas.build(:meta_key => 'station', :meta_value => e.nearest_station)
-      post.post_metas.build(:meta_key => 'event_address', :meta_value => e.prefecture_name + e.address)
-      post.post_metas.build(:meta_key => 'event_date', :meta_value => e.event_date_time.to_date)
-      post.post_metas.build(:meta_key => 'event_date_start', :meta_value => e.event_date_time.to_s(:time))
-      post.post_metas.build(:meta_key => 'title', :meta_value => e.title)
-      post.post_metas.build(:meta_key => 'event_pr', :meta_value => e.description)
-      post.post_metas.build(:meta_key => 'reserve_male', :meta_value => e.reservation_state_for_male)
-      post.post_metas.build(:meta_key => 'reserve_female', :meta_value => e.reservation_state_for_female)
-      post.post_metas.build(:meta_key => 'event_price_male', :meta_value => e.price_for_male)
-      post.post_metas.build(:meta_key => 'event_price_female', :meta_value => e.price_for_female)
-      post.post_metas.build(:meta_key => 'event_app_conditions_male', :meta_value => e.eligibility_for_male)
-      post.post_metas.build(:meta_key => 'event_app_conditions_female', :meta_value => e.eligibility_for_female)
-      post.post_metas.build(:meta_key => 'event_target_age_male', :meta_value => e.age_range_for_male)
-      post.post_metas.build(:meta_key => 'event_target_age_female', :meta_value => e.age_range_for_female)
-      post.post_metas.build(:meta_key => 'ev_note', :meta_value => e.important_reminder)
-      post.post_metas.build(:meta_key => 'event_host', :meta_value => '777')
-      post.post_metas.build(:meta_key => '_event_host', :meta_value => 'field_57bfc186741fc')
-      post.post_metas.build(:meta_key => 'event_link', :meta_value => e.event_url)
-      post.post_metas.build(:meta_key => 'event_cancel', :meta_value => e.cancellation_deadline)
-      post.post_metas.build(:meta_key => 'mochimono', :meta_value => e.personal_document)
-      post.post_metas.build(:meta_key => 'food', :meta_value => e.food_drink)
-      post.post_metas.build(:meta_key => 'fukuso', :meta_value => e.event_dress_code)
-      post.post_metas.build(:meta_key => 'sugo', :meta_value => e.gathering_place)
-      if post.term_relations.blank?
-        post.term_relations.build(:term_taxonomy_id => '6', :term_order => '0')
-        post.term_relations.build(:term_taxonomy_id => '7', :term_order => '0')
-        prefecture = e.prefecture_name.gsub(/['県','府']/,'').gsub('東京都','東京')
-        term = Term.find_by_name(prefecture)
-        post.term_relations.build(:term_taxonomy_id => term.term_id, :term_order => '0') unless term.blank?
-      end
-      post.save!  
+      e.create_or_update_post
     end
+  end
+  
+  def create_or_update_post
+    params = {}
+    params[:post] = {:post_title => self.title, :post_content => '<a href="https://track.affiliate-b.com/visit.php?guid=ON&a=W3279W-y639553&p=t4956890" target="_blank" rel="nofollow">毎週開催の★人気婚活パーティーなら！</a><img src="https://track.affiliate-b.com/lead/W3279W/t4956890/y639553" width="1" height="1" style="border:none;"/>', :guid => ""}
+    if self.post
+      post = self.post
+    else
+      post = self.build_post(params[:post])
+    end
+    post.post_metas.destroy_all unless post.post_metas.blank?
+    post.post_metas.build(:meta_key => 'ev_id', :meta_value => self.id)
+    post.post_metas.build(:meta_key => 'event_img_url', :meta_value => self.main_image_url)
+    post.post_metas.build(:meta_key => 'event_space', :meta_value => self.venue_name)
+    post.post_metas.build(:meta_key => 'station', :meta_value => self.nearest_station)
+    post.post_metas.build(:meta_key => 'event_address', :meta_value => self.address)
+    post.post_metas.build(:meta_key => 'event_date', :meta_value => self.event_date_time.to_date)
+    post.post_metas.build(:meta_key => 'event_date_start', :meta_value => self.event_date_time.to_s(:time))
+    post.post_metas.build(:meta_key => 'title', :meta_value => self.title)
+    post.post_metas.build(:meta_key => 'event_pr', :meta_value => self.description)
+    post.post_metas.build(:meta_key => 'reserve_male', :meta_value => self.reservation_state_for_male)
+    post.post_metas.build(:meta_key => 'reserve_female', :meta_value => self.reservation_state_for_female)
+    post.post_metas.build(:meta_key => 'event_price_male', :meta_value => self.price_for_male)
+    post.post_metas.build(:meta_key => 'event_price_female', :meta_value => self.price_for_female)
+    post.post_metas.build(:meta_key => 'event_app_conditions_male', :meta_value => self.eligibility_for_male)
+    post.post_metas.build(:meta_key => 'event_app_conditions_female', :meta_value => self.eligibility_for_female)
+    post.post_metas.build(:meta_key => 'event_target_age_male', :meta_value => self.age_range_for_male)
+    post.post_metas.build(:meta_key => 'event_target_age_female', :meta_value => self.age_range_for_female)
+    post.post_metas.build(:meta_key => 'ev_note', :meta_value => self.important_reminder)
+    post.post_metas.build(:meta_key => 'event_host', :meta_value => '777')
+    post.post_metas.build(:meta_key => '_event_host', :meta_value => 'field_57bfc186741fc')
+    post.post_metas.build(:meta_key => 'event_link', :meta_value => self.event_url)
+    post.post_metas.build(:meta_key => 'event_cancel', :meta_value => self.cancellation_deadline)
+    post.post_metas.build(:meta_key => 'mochimono', :meta_value => self.personal_document)
+    post.post_metas.build(:meta_key => 'food', :meta_value => self.food_drink)
+    post.post_metas.build(:meta_key => 'fukuso', :meta_value => self.event_dress_code)
+    post.post_metas.build(:meta_key => 'sugo', :meta_value => self.gathering_place)
+    if post.term_relations.blank?
+      post.term_relations.build(:term_taxonomy_id => '6', :term_order => '0')
+      post.term_relations.build(:term_taxonomy_id => '7', :term_order => '0')
+      prefecture = self.prefecture_name.gsub(/['県','府']/,'').gsub('東京都','東京')
+      term = Term.find_by_name(prefecture)
+      post.term_relations.build(:term_taxonomy_id => term.term_id, :term_order => '0') unless term.blank?
+    end
+    post.save!
   end
   
   def self.csv_head
