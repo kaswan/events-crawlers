@@ -207,7 +207,7 @@ event_detail_pages.uniq.each do |detail_page_link|
       end
     end
     rescue Exception => e
-      p e.message    
+      p e.message
     end    
   
   #p event_conditions

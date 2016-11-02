@@ -157,7 +157,8 @@ event_detail_pages.uniq.each do |detail_page_link|
       end
     end
   rescue Exception => e
-    p e.backtrace.join("\n")    
+    #p e.backtrace.join("\n")
+    p e.message    
   end
   
   #exit

@@ -40,16 +40,82 @@ class ExeoJapan < ActiveRecord::Base
     post.post_metas.build(:meta_key => 'event_host', :meta_value => '149')
     post.post_metas.build(:meta_key => '_event_host', :meta_value => 'field_57bfc186741fc')
     post.post_metas.build(:meta_key => 'event_link', :meta_value => self.event_url)
-    if post.term_relations.blank?
-      post.term_relations.build(:term_taxonomy_id => '6', :term_order => '0')
-      post.term_relations.build(:term_taxonomy_id => '7', :term_order => '0')
-      prefecture = self.prefecture_name.gsub(/['県','府']/,'').gsub('東京都','東京')
-      term = Term.find_by_name(prefecture)
-      post.term_relations.build(:term_taxonomy_id => term.term_id, :term_order => '0') unless term.blank?
+    
+    post.term_relations.destroy_all unless post.term_relations.nil?
+    #if post.term_relations.blank?
+    post.term_relations.build(:term_taxonomy_id => '6', :term_order => '0')
+    post.term_relations.build(:term_taxonomy_id => '7', :term_order => '0')
+    prefecture = self.prefecture_name.gsub(/['県','府']/,'').gsub('東京都','東京')
+    term = Term.find_by_name(prefecture)
+    post.term_relations.build(:term_taxonomy_id => term.term_id, :term_order => '0') unless term.blank?
+    
+    # For male
+    age_range_for_male = self.age_range_for_male.gsub(/['歳位'|'歳代']/,'').split(/['～'|'・']/)
+    age_range = []
+    age_range_for_male.each do |age|
+      age_range << age_range_term_for_male(age)
+    end unless age_range_for_male.blank?
+    age_range.uniq.each do |age|
+      post.term_relations.build(:term_taxonomy_id => age, :term_order => '0')
     end
+    # For female
+    age_range_for_female = self.age_range_for_female.gsub(/['歳位'|'歳代']/,'').split(/['～'|'・']/)
+    age_range = []
+    age_range_for_female.each do |age|
+      age_range << age_range_term_for_female(age)
+    end unless age_range_for_female.blank?
+    age_range.uniq.each do |age|
+      post.term_relations.build(:term_taxonomy_id => age, :term_order => '0')
+    end
+    
+    #end
     post.save!
   end
   
+  
+  def age_range_term_for_male age
+    
+    unless age.blank? && age.to_i > 0
+      case age.to_i
+      when 20..29
+        return 61
+      when 30..39
+        return 62
+      when 40..49
+        return 63
+      when 50..59
+        return 64
+      when 60..75
+        return 65
+      else
+        return false
+      end
+    end
+    return false
+  end
+  
+  
+  def age_range_term_for_female age
+      
+    unless age.blank? && age.to_i > 0
+      case age.to_i
+      when 20..29
+        return 66
+      when 30..39
+        return 67
+      when 40..49
+        return 68
+      when 50..59
+        return 69
+      when 60..75
+        return 70
+      else
+        return false
+      end
+    end
+    return false
+  end
+    
   def self.csv_head
     [
       human_attribute_name(:id),
