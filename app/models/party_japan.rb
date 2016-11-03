@@ -55,7 +55,7 @@ class PartyJapan < ActiveRecord::Base
     post.term_relations.build(:term_taxonomy_id => term.term_id, :term_order => '0') unless term.blank?
     #end
     # For male
-    age_range_for_male = self.age_range_for_male.gsub(/['～']/,'').split(/['歳']/)
+    age_range_for_male = self.age_range_for_male.gsub(/['～'|'・']/,'').split(/['歳']/)
     age_range = []
     age_range_for_male[0..1].each do |age|
       age_range << age_range_term_for_male(age)
@@ -64,7 +64,7 @@ class PartyJapan < ActiveRecord::Base
       post.term_relations.build(:term_taxonomy_id => age, :term_order => '0')
     end
     # For female
-    age_range_for_female = self.age_range_for_female.gsub(/['～']/,'').split(/['歳']/)
+    age_range_for_female = self.age_range_for_female.gsub(/['～'|'・']/,'').split(/['歳']/)
     age_range = []
     age_range_for_female[0..1].each do |age|
       age_range << age_range_term_for_female(age)
