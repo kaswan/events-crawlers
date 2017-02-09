@@ -11,13 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929061529) do
-
-  create_table "entries", force: :cascade do |t|
-    t.integer "post_id",    limit: 4,     null: false
-    t.string  "meta_key",   limit: 255,   null: false
-    t.text    "meta_value", limit: 65535, null: false
-  end
+ActiveRecord::Schema.define(version: 20170209083419) do
 
   create_table "exeo_japans", force: :cascade do |t|
     t.string   "event_url",                    limit: 255
@@ -350,5 +344,32 @@ ActiveRecord::Schema.define(version: 20160929061529) do
   add_index "wpf0c254users", ["user_email"], name: "user_email", using: :btree
   add_index "wpf0c254users", ["user_login"], name: "user_login_key", using: :btree
   add_index "wpf0c254users", ["user_nicename"], name: "user_nicename", using: :btree
+
+  create_table "youbrides", force: :cascade do |t|
+    t.string   "event_url",                    limit: 255
+    t.string   "main_image_url",               limit: 255
+    t.string   "venue_name",                   limit: 255
+    t.string   "nearest_station",              limit: 255
+    t.string   "postalcode",                   limit: 255
+    t.string   "prefecture_name",              limit: 255
+    t.string   "address",                      limit: 255
+    t.datetime "event_date_time"
+    t.string   "event_start_time",             limit: 255
+    t.string   "event_end_time",               limit: 255
+    t.string   "reception_time",               limit: 255
+    t.string   "title",                        limit: 255
+    t.text     "description",                  limit: 65535
+    t.string   "reservation_limit_for_male",   limit: 255
+    t.string   "reservation_limit_for_female", limit: 255
+    t.string   "reservation_state_for_male",   limit: 255
+    t.string   "reservation_state_for_female", limit: 255
+    t.string   "price_for_male",               limit: 255
+    t.string   "price_for_female",             limit: 255
+    t.string   "age_range_for_male",           limit: 255
+    t.string   "age_range_for_female",         limit: 255
+    t.text     "cancellation_policy",          limit: 65535
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+  end
 
 end
