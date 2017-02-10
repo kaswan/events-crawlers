@@ -22,7 +22,9 @@ class CreateYoubrides < ActiveRecord::Migration
       t.string :price_for_male
       t.string :price_for_female      
       t.string :age_range_for_male
-      t.string :age_range_for_female      
+      t.string :age_range_for_female
+      t.string :eligibility_for_male
+      t.string :eligibility_for_female      
       t.text :cancellation_policy
       
       t.timestamps null: false

@@ -1,0 +1,1 @@
+json.array! @youbrides, partial: 'youbrides/youbride', as: :youbride

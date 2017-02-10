@@ -1,0 +1,129 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to _('Edit'), edit_youbride_path(@youbride) %> |
+<%= link_to _('Back'), youbrides_path %>
+
+<p>
+  <strong><%= _('Event url') %>:</strong>
+  <%= @youbride.event_url %>
+</p>
+
+<p>
+  <strong><%= _('Main image url') %>:</strong>
+  <%= @youbride.main_image_url %>
+</p>
+
+<p>
+  <strong><%= _('Title') %>:</strong>
+  <%= @youbride.title %>
+</p>
+
+<p>
+  <strong><%= _('Description') %>:</strong>
+  <%= simple_format @youbride.description %>
+</p>
+
+<p>
+  <strong><%= _('Venue name') %>:</strong>
+  <%= @youbride.venue_name %>
+</p>
+
+<p>
+  <strong><%= _('Nearest station') %>:</strong>
+  <%= @youbride.nearest_station %>
+</p>
+
+<p>
+  <strong><%= _('Postalcode') %>:</strong>
+  <%= @youbride.postalcode %>
+</p>
+
+<p>
+  <strong><%= _('Prefecture name') %>:</strong>
+  <%= @youbride.prefecture_name %>
+</p>
+
+<p>
+  <strong><%= _('Address') %>:</strong>
+  <%= @youbride.address %>
+</p>
+
+<p>
+  <strong><%= _('Event date time') %>:</strong>
+  <%= @youbride.event_date_time %>
+</p>
+
+<p>
+  <strong><%= _('Event start time') %>:</strong>
+  <%= @youbride.event_start_time %>
+</p>
+
+<p>
+  <strong><%= _('Event end time') %>:</strong>
+  <%= @youbride.event_end_time %>
+</p>
+
+<p>
+  <strong><%= _('Reception time') %>:</strong>
+  <%= @youbride.reception_time %>
+</p>
+
+
+<p>
+  <strong><%= _('Reservation limit for male') %>:</strong>
+  <%= @youbride.reservation_limit_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Reservation state for male') %>:</strong>
+  <%= @youbride.reservation_state_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Reservation limit for female') %>:</strong>
+  <%= @youbride.reservation_limit_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Reservation state for female') %>:</strong>
+  <%= @youbride.reservation_state_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Price for male') %>:</strong>
+  <%= @youbride.price_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Price for female') %>:</strong>
+  <%= @youbride.price_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Eligibility for male') %>:</strong>
+  <%= @youbride.eligibility_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Eligibility for female') %>:</strong>
+  <%= @youbride.eligibility_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Age range for male') %>:</strong>
+  <%= @youbride.age_range_for_male %>
+</p>
+
+<p>
+  <strong><%= _('Age range for female') %>:</strong>
+  <%= @youbride.age_range_for_female %>
+</p>
+
+<p>
+  <strong><%= _('Cancellation policy') %>:</strong>
+  <%= simple_format @youbride.cancellation_policy %>
+</p>
+
+
+<%= link_to _('Edit'), edit_youbride_path(@youbride) %> |
+<%= link_to _('Back'), youbrides_path %>

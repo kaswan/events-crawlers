@@ -1,0 +1,2 @@
+module YoubridesHelper
+end

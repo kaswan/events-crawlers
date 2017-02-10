@@ -1,0 +1,57 @@
+
+<p id="notice"><%= notice %></p>
+<h1>Youbride Japans(<%= @youbrides.size %>件)</h1>
+<%= link_to _('CSV Download'), csv_download_youbrides_path %> |
+<%= link_to _('Back'), root_path %>
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th><%= _('Event ID') %></th>
+      <th><%= _('Title') %></th>
+      <th><%= _('Venue name') %></th>
+      <th><%= _('Postalcode') %></th>
+      <th><%= _('Prefecture name') %></th>
+      <th><%= _('Address') %></th>
+      <th><%= _('Event date time') %></th>      
+      <th><%= _('Reservation state for male') %></th>
+      <th><%= _('Reservation state for female') %></th>
+      <th><%= _('Price for male') %></th>
+      <th><%= _('Price for female') %></th>
+      <th><%= _('Eligibility for male') %></th>
+      <th><%= _('Eligibility for female') %></th>
+      <th><%= _('Age range for male') %></th>
+      <th><%= _('Age range for female') %></th>
+      <th><%= _('Updated at') %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @youbrides.each do |youbride| %>
+      <tr>
+        <td><%= link_to youbride.id, youbride.event_url, {target: '_blank'} %></td>
+        <td><%= youbride.title %></td>
+        <td><%= youbride.venue_name %></td>
+        <td><%= youbride.postalcode %></td>
+        <td><%= youbride.prefecture_name %></td>
+        <td><%= youbride.address %></td>
+        <td><%= youbride.event_date_time %></td>        
+        <td><%= youbride.reservation_state_for_male %></td>
+        <td><%= youbride.reservation_state_for_female %></td>
+        <td><%= youbride.price_for_male %></td>
+        <td><%= youbride.price_for_female %></td>
+        <td><%= youbride.eligibility_for_male %></td>
+        <td><%= youbride.eligibility_for_female %></td>
+        <td><%= youbride.age_range_for_male %></td>
+        <td><%= youbride.age_range_for_female %></td>
+        <td><%= l youbride.updated_at, format: :short %></td>
+        <td><%= link_to _('Show'), youbride %></td>
+        <td><%= link_to _('Edit'), edit_youbride_path(youbride) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to _('Back'), root_path %>
+

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :youbrides  do
+    collection do
+      get :csv_download
+    end
+  end
   resources :exeo_japans do
     collection do
       get :csv_download

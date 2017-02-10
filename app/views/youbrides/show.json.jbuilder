@@ -1,0 +1,1 @@
+json.partial! "youbrides/youbride", youbride: @youbride

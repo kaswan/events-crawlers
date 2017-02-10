@@ -27,7 +27,7 @@ unless next_page.blank?
 end
 
 #p event_detail_pages
-#event_detail_pages << "/party/23023"
+#event_detail_pages << "/party/23260"
 
 event_detail_pages.uniq.each do |detail_page_link|
   p detail_page_link
@@ -106,8 +106,13 @@ event_detail_pages.uniq.each do |detail_page_link|
   p "------------------------"  
   
   
-   ticket = detail_page.search('//div[@class="ArCMN01PrgP02 BorderDotted"]//div[@class="MdCMN06Ticket"]').first 
-   ticket.search('//p[@class="mdCMN06Price"]').inner_text.split(/['\n'|'\r'|'\s+']/).compact.reject(&:blank?).each_slice(7).to_a.each do |t|
+   ticket = detail_page.search('//div[@class="ArCMN01PrgP02 BorderDotted"]//div[@class="MdCMN06Ticket"]').first
+   ticket_cond = ticket.search('//p[@class="mdCMN06Price"]').inner_text.split(/['\n'|'\r'|'\s+']/).compact.reject(&:blank?)
+   
+   male_ticket = ("男性" + ticket_cond.each_slice(ticket_cond.size / 2).first.join('#').split(/['男性'|'女性']/).compact.reject(&:blank?).first).split('#')
+   female_ticket = ("女性" + ticket_cond.each_slice(ticket_cond.size / 2).first.join('#').split(/['男性'|'女性']/).compact.reject(&:blank?).last).split('#')
+   [male_ticket, female_ticket].to_a.each do |t|
+     
      if t.first == "男性"
        t.each_slice(2).to_a.each do |p|
          if p.first == "男性"
@@ -135,8 +140,12 @@ event_detail_pages.uniq.each do |detail_page_link|
    end
   
    age_range = ticket.search('//p[@class="mdCMN06Quality"]').inner_text.split(/['\n'|'\r'|'\s+']/).compact.reject(&:blank?)
-   event_conditions['age_range_for_male'] = age_range[0] 
-   event_conditions['age_range_for_female'] = age_range[1]   
+   male_age_range = age_range[0].split('、')
+   female_age_range = age_range[1].split('、')
+   event_conditions['age_range_for_male'] = male_age_range.first 
+   event_conditions['age_range_for_female'] = female_age_range.first
+   event_conditions['eligibility_for_male'] = (male_age_range - [male_age_range.first]).join('、') 
+   event_conditions['eligibility_for_female'] = (female_age_range - [female_age_range.first]).join('、')
    event_conditions['cancellation_policy'] = detail_page.search('//ul[@class="MdCMN04ListP01"]/li').inner_text
 
    begin  
@@ -167,7 +176,8 @@ event_detail_pages.uniq.each do |detail_page_link|
             
          bride.age_range_for_male = event_conditions['age_range_for_male'] if event_conditions['age_range_for_male']
          bride.age_range_for_female = event_conditions['age_range_for_female'] if event_conditions['age_range_for_female']
-            
+         bride.eligibility_for_male = event_conditions['eligibility_for_male'] if event_conditions['eligibility_for_male']
+         bride.eligibility_for_female = event_conditions['eligibility_for_female'] if event_conditions['eligibility_for_female']   
             
          bride.reservation_limit_for_male = event_conditions['reservation_limit_for_male'] if event_conditions['reservation_limit_for_male']
          bride.reservation_limit_for_female = event_conditions['reservation_limit_for_female'] if event_conditions['reservation_limit_for_female']

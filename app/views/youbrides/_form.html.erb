@@ -1,10 +1,13 @@
-<%= simple_form_for(@otokon_japan) do |f| %>
-  <% if @otokon_japan.errors.any? %>
+
+
+
+<%= simple_form_for(@youbride) do |f| %>
+  <% if @youbride.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@otokon_japan.errors.count, "error") %> prohibited this otokon_japan from being saved:</h2>
+      <h2><%= pluralize(@youbride.errors.count, "error") %> prohibited this youbride from being saved:</h2>
 
       <ul>
-      <% @otokon_japan.errors.full_messages.each do |message| %>
+      <% @youbride.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -63,14 +66,7 @@
     <%= f.label :price_for_female %><br>
     <%= f.text_field :price_for_female %>
   </div>
-  <div class="field">
-    <%= f.label :eligibility_for_male %><br>
-    <%= f.text_area :eligibility_for_male %>
-  </div>
-  <div class="field">
-    <%= f.label :eligibility_for_female %><br>
-    <%= f.text_area :eligibility_for_female %>
-  </div>
+  
   <div class="field">
     <%= f.label :age_range_for_male %><br>
     <%= f.text_field :age_range_for_male %>
@@ -79,13 +75,19 @@
     <%= f.label :age_range_for_female %><br>
     <%= f.text_field :age_range_for_female %>
   </div>
+  
   <div class="field">
-    <%= f.label :important_reminder %><br>
-    <%= f.text_area :important_reminder %>
+    <%= f.label :eligibility_for_male %><br>
+    <%= f.text_area :eligibility_for_male %>
   </div>
   <div class="field">
-    <%= f.label :all_images_link %><br>
-    <%= f.text_area :all_images_link %>
+    <%= f.label :eligibility_for_female %><br>
+    <%= f.text_area :eligibility_for_female %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :cancellation_policy %><br>
+    <%= f.text_area :cancellation_policy %>
   </div>
   <div class="actions">
     <%= f.submit %>

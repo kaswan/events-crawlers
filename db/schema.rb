@@ -367,6 +367,8 @@ ActiveRecord::Schema.define(version: 20170209083419) do
     t.string   "price_for_female",             limit: 255
     t.string   "age_range_for_male",           limit: 255
     t.string   "age_range_for_female",         limit: 255
+    t.string   "eligibility_for_male",         limit: 255
+    t.string   "eligibility_for_female",       limit: 255
     t.text     "cancellation_policy",          limit: 65535
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
