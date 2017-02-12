@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20170209083419) do
 
+  create_table "entries", force: :cascade do |t|
+    t.integer "post_id",    limit: 4,     null: false
+    t.string  "meta_key",   limit: 255,   null: false
+    t.text    "meta_value", limit: 65535, null: false
+  end
+
   create_table "exeo_japans", force: :cascade do |t|
     t.string   "event_url",                    limit: 255
     t.string   "main_image_url",               limit: 255
