@@ -208,6 +208,7 @@ ja:
       exeo_japan: "EXEO JAPAN"
       otokon_japan: "OTOKON"
       youbride: "Party Youbride"
+      ptot_jinzai_bank: "Ptot Jinzai Bank"
     attributes:
       exeo_japan:
         event_url: 'イベントURL'
@@ -310,4 +311,24 @@ ja:
         eligibility_for_male: '参加資格【男性】'
         eligibility_for_female: '参加資格【女性】'
         cancellation_policy: 'キャンセル料について'
+      ptot_jinzai_bank:
+        page_url: 'サイトURL'
+        title: 'タイトル'
+        sub_title: 'サブタイトル' 
+        job_feature: '求人特徴'
+        salary: '給与'
+        working_hours: '勤務時間'
+        holiday_vacation: '休日・休暇'
+        job_category: '募集職種'
+        employment_type: '雇用形態'
+        job_detail: '業務内容'
+        recommended_comment: 'キャリアパートナーのおすすめコメント'
+        workplace_feature: '職場特徴'
+        corporate_name: '法人名'
+        office_name: '事業所名'
+        institution_type: '施設形態'
+        postalcode: '郵便番号'
+        prefecture: '都道府県'
+        work_location: '勤務地'
+        nearest_station: '最寄交通機関'  
         
