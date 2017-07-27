@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: otona-cafe 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-29 16:51+0900\n"
-"PO-Revision-Date: 2016-09-29 16:51+0900\n"
+"POT-Creation-Date: 2017-07-27 10:57+0900\n"
+"PO-Revision-Date: 2017-07-27 10:57+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -48,6 +48,9 @@ msgstr ""
 msgid "Contact info"
 msgstr ""
 
+msgid "Corporate name"
+msgstr ""
+
 msgid "Description"
 msgstr ""
 
@@ -61,6 +64,9 @@ msgid "Eligibility for female"
 msgstr ""
 
 msgid "Eligibility for male"
+msgstr ""
+
+msgid "Employment type"
 msgstr ""
 
 msgid "Event ID"
@@ -147,13 +153,31 @@ msgstr ""
 msgid "Gathering place"
 msgstr ""
 
+msgid "Holiday vacation"
+msgstr ""
+
 msgid "Important reminder"
+msgstr ""
+
+msgid "Institution type"
+msgstr ""
+
+msgid "Job category"
+msgstr ""
+
+msgid "Job detail"
+msgstr ""
+
+msgid "Job feature"
 msgstr ""
 
 msgid "Main image url"
 msgstr ""
 
 msgid "Nearest station"
+msgstr ""
+
+msgid "Office name"
 msgstr ""
 
 msgid "Otokon japan"
@@ -244,6 +268,9 @@ msgid "OtokonJapan|Title"
 msgstr ""
 
 msgid "OtokonJapan|Venue name"
+msgstr ""
+
+msgid "Page url"
 msgstr ""
 
 msgid "Party japan"
@@ -417,6 +444,9 @@ msgstr ""
 msgid "Post|To ping"
 msgstr ""
 
+msgid "Prefecture"
+msgstr ""
+
 msgid "Prefecture name"
 msgstr ""
 
@@ -427,6 +457,9 @@ msgid "Price for male"
 msgstr ""
 
 msgid "Reception time"
+msgstr ""
+
+msgid "Recommended comment"
 msgstr ""
 
 msgid "Reservation limit for female"
@@ -441,7 +474,13 @@ msgstr ""
 msgid "Reservation state for male"
 msgstr ""
 
+msgid "Salary"
+msgstr ""
+
 msgid "Show"
+msgstr ""
+
+msgid "Sub title"
 msgstr ""
 
 msgid "Target people"
@@ -472,4 +511,13 @@ msgid "Updated at"
 msgstr ""
 
 msgid "Venue name"
+msgstr ""
+
+msgid "Work location"
+msgstr ""
+
+msgid "Working hours"
+msgstr ""
+
+msgid "Workplace feature"
 msgstr ""

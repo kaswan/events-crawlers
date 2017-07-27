@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :ptot_jinzai_banks do
+    collection do
+      get :csv_download
+    end
+  end
   resources :youbrides  do
     collection do
       get :csv_download

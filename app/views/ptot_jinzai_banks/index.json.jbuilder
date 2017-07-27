@@ -1,0 +1,1 @@
+json.array! @ptot_jinzai_banks, partial: 'ptot_jinzai_banks/ptot_jinzai_bank', as: :ptot_jinzai_bank

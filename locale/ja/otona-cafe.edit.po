@@ -47,6 +47,9 @@ msgstr "キャンセル料について"
 msgid "Contact info"
 msgstr "連絡先"
 
+msgid "Corporate name"
+msgstr ""
+
 msgid "Description"
 msgstr "イベント内容"
 
@@ -61,6 +64,9 @@ msgstr "参加資格【女性】"
 
 msgid "Eligibility for male"
 msgstr "参加資格【男性】"
+
+msgid "Employment type"
+msgstr ""
 
 msgid "Event ID"
 msgstr "イベントID"
@@ -146,14 +152,32 @@ msgstr "Food & Drink"
 msgid "Gathering place"
 msgstr "集合"
 
+msgid "Holiday vacation"
+msgstr ""
+
 msgid "Important reminder"
 msgstr "注意事項"
+
+msgid "Institution type"
+msgstr ""
+
+msgid "Job category"
+msgstr ""
+
+msgid "Job detail"
+msgstr ""
+
+msgid "Job feature"
+msgstr ""
 
 msgid "Main image url"
 msgstr "メイン画像URL"
 
 msgid "Nearest station"
 msgstr "最寄り駅"
+
+msgid "Office name"
+msgstr ""
 
 msgid "Otokon japan"
 msgstr ""
@@ -244,6 +268,9 @@ msgstr "タイトル"
 
 msgid "OtokonJapan|Venue name"
 msgstr "開催場所"
+
+msgid "Page url"
+msgstr ""
 
 msgid "Party japan"
 msgstr ""
@@ -416,6 +443,10 @@ msgstr ""
 msgid "Post|To ping"
 msgstr ""
 
+#, fuzzy
+msgid "Prefecture"
+msgstr "県名"
+
 msgid "Prefecture name"
 msgstr "県名"
 
@@ -427,6 +458,9 @@ msgstr "料金【男性】"
 
 msgid "Reception time"
 msgstr "受付開始"
+
+msgid "Recommended comment"
+msgstr ""
 
 msgid "Reservation limit for female"
 msgstr "人数条件【女性】"
@@ -440,8 +474,14 @@ msgstr "予約状況【女性】"
 msgid "Reservation state for male"
 msgstr "予約状況【男性】"
 
+msgid "Salary"
+msgstr ""
+
 msgid "Show"
 msgstr "詳細"
+
+msgid "Sub title"
+msgstr ""
 
 msgid "Target people"
 msgstr "ターゲット"
@@ -472,3 +512,12 @@ msgstr ""
 
 msgid "Venue name"
 msgstr "開催場所"
+
+msgid "Work location"
+msgstr ""
+
+msgid "Working hours"
+msgstr ""
+
+msgid "Workplace feature"
+msgstr ""
