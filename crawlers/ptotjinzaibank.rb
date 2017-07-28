@@ -93,7 +93,9 @@ page.search('//div[@class="melon-box-white"]//a').select{|link| link && link[:hr
             prefecture_name = "北海道"
           elsif address.split(/['市']/).size > 1 && address.split(/['市']/).first.strip == "札幌"
             prefecture_name = "北海道"  
-          end    
+          end 
+          
+          prefecture_name = "東京" if prefecture_name == "東京都"
         end
       end
       
