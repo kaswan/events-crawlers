@@ -1,0 +1,1 @@
+json.partial! "ot_jinzai_banks/ot_jinzai_bank", ot_jinzai_bank: @ot_jinzai_bank

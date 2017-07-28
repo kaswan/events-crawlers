@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  page_url: MyString
+  title: MyString
+  sub_title: MyString
+  job_feature: MyText
+  salary: MyText
+  working_hours: MyString
+  holiday_vacation: MyText
+  job_category: MyText
+  employment_type: MyText
+  job_detail: MyText
+  recommended_comment: MyText
+  workplace_feature: MyText
+  corporate_name: MyString
+  office_name: MyString
+  institution_type: MyString
+  work_location: MyText
+  postalcode: MyText
+  prefecture: MyString
+  nearest_station: MyText
+
+two:
+  page_url: MyString
+  title: MyString
+  sub_title: MyString
+  job_feature: MyText
+  salary: MyText
+  working_hours: MyString
+  holiday_vacation: MyText
+  job_category: MyText
+  employment_type: MyText
+  job_detail: MyText
+  recommended_comment: MyText
+  workplace_feature: MyText
+  corporate_name: MyString
+  office_name: MyString
+  institution_type: MyString
+  work_location: MyText
+  postalcode: MyText
+  prefecture: MyString
+  nearest_station: MyText

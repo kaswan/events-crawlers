@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ptot Jinzai Banks(<%= @ot_jinzai_banks.size %>件)</h1>
+<%= link_to _('CSV Download'), csv_download_ot_jinzai_banks_path %> |
+<%= link_to _('Back'), root_path %>
+
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th>ID</th>
+      <th><%= _('Page url') %></th>
+      <th><%= _('Title') %></th>
+      <th><%= _('Sub title') %></th>
+      <th><%= _('Job feature') %></th>
+      <th><%= _('Salary') %></th>
+      <th><%= _('Working hours') %></th>
+      <th><%= _('Holiday vacation') %></th>
+      <th><%= _('Job category') %></th>
+      <th><%= _('Employment type') %></th>
+      <th><%= _('Job detail') %></th>
+      <th><%= _('Recommended comment') %></th>
+      <th><%= _('Workplace feature') %></th>
+      <th><%= _('Corporate name') %></th>
+      <th><%= _('Office name') %></th>
+      <th><%= _('Institution type') %></th>
+      <th><%= _('Work location') %></th>
+      <th><%= _('Prefecture') %></th>
+      <th><%= _('Nearest station') %></th>
+      <th><%= _('Updated at') %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ot_jinzai_banks.each do |ot_jinzai_bank| %>
+      <tr>
+        <td><%= ot_jinzai_bank.id %></td>
+        <td><%= link_to 'サイトリンク先へ', ot_jinzai_bank.page_url, target: '_blank' %></td>
+        <td><%= ot_jinzai_bank.title %></td>
+        <td><%= ot_jinzai_bank.sub_title %></td>
+        <td><%= ot_jinzai_bank.job_feature %></td>
+        <td><%= ot_jinzai_bank.salary %></td>
+        <td><%= ot_jinzai_bank.working_hours %></td>
+        <td><%= ot_jinzai_bank.holiday_vacation %></td>
+        <td><%= ot_jinzai_bank.job_category %></td>
+        <td><%= ot_jinzai_bank.employment_type %></td>
+        <td><%= ot_jinzai_bank.job_detail %></td>
+        <td><%= ot_jinzai_bank.recommended_comment %></td>
+        <td><%= ot_jinzai_bank.workplace_feature %></td>
+        <td><%= ot_jinzai_bank.corporate_name %></td>
+        <td><%= ot_jinzai_bank.office_name %></td>
+        <td><%= ot_jinzai_bank.institution_type %></td>
+        <td><%= ot_jinzai_bank.work_location %></td>
+        <td><%= ot_jinzai_bank.prefecture %></td>
+        <td><%= ot_jinzai_bank.nearest_station %></td>
+        <td><%= l ot_jinzai_bank.updated_at, format: :short %></td>
+        <td><%= link_to 'Show', ot_jinzai_bank %></td>
+        <td><%= link_to 'Edit', edit_ot_jinzai_bank_path(ot_jinzai_bank) %></td>        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to 'New Ot jinzai bank', new_ot_jinzai_bank_path %>

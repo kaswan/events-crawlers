@@ -1,0 +1,2 @@
+module OtJinzaiBanksHelper
+end

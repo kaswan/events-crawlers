@@ -1,0 +1,1 @@
+json.array! @st_jinzai_banks, partial: 'st_jinzai_banks/st_jinzai_bank', as: :st_jinzai_bank

@@ -3,7 +3,7 @@ require 'csv'
 agent ||= Mechanize.new
 agent.user_agent = 'Mozilla/5.0 (Windows NT 5.1; rv:23.0) Gecko/20100101 Firefox/23.0'
 web_site_url = "https://www.ptotjinzaibank.com"
-page = agent.get("https://www.ptotjinzaibank.com/")
+page = agent.get("https://www.ptotjinzaibank.com/st/")
 
 page.search('//div[@class="melon-box-white"]//a').select{|link| link && link[:href] && link[:href].match(/area/) }.each do |link|
   offer_page_links = []
@@ -38,7 +38,7 @@ page.search('//div[@class="melon-box-white"]//a').select{|link| link && link[:hr
     end
   end
   
-  already_exists = PtotJinzaiBank.all.map(&:id)
+  already_exists = StJinzaiBank.all.map(&:id)
   offer_arr = {}
   offer_page_links.each do |offer|
     id = offer.split('.html').first.split('/').last
@@ -98,8 +98,8 @@ page.search('//div[@class="melon-box-white"]//a').select{|link| link && link[:hr
       end
       
       begin  
-        PtotJinzaiBank.transaction do  
-          PtotJinzaiBank.where(id: id.to_i).first_or_initialize.tap do |of| 
+        StJinzaiBank.transaction do  
+          StJinzaiBank.where(id: id.to_i).first_or_initialize.tap do |of| 
             of.id = id.to_i
             of.page_url = offer_detail['page_url']
             of.title = offer_detail['title']

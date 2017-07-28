@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :st_jinzai_banks do
+    collection do
+      get :csv_download
+    end
+  end
+  resources :ot_jinzai_banks do
+    collection do
+      get :csv_download
+    end
+  end
   resources :ptot_jinzai_banks do
     collection do
       get :csv_download

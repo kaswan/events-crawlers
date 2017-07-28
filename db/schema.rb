@@ -11,13 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724042301) do
-
-  create_table "entries", force: :cascade do |t|
-    t.integer "post_id",    limit: 4,     null: false
-    t.string  "meta_key",   limit: 255,   null: false
-    t.text    "meta_value", limit: 65535, null: false
-  end
+ActiveRecord::Schema.define(version: 20170728012641) do
 
   create_table "exeo_japans", force: :cascade do |t|
     t.string   "event_url",                    limit: 255
@@ -41,6 +35,30 @@ ActiveRecord::Schema.define(version: 20170724042301) do
     t.text     "all_images_link",              limit: 65535
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+  end
+
+  create_table "ot_jinzai_banks", force: :cascade do |t|
+    t.string   "page_url",            limit: 255
+    t.string   "title",               limit: 255
+    t.string   "sub_title",           limit: 255
+    t.text     "job_feature",         limit: 65535
+    t.text     "salary",              limit: 65535
+    t.string   "working_hours",       limit: 255
+    t.text     "holiday_vacation",    limit: 65535
+    t.text     "job_category",        limit: 65535
+    t.text     "employment_type",     limit: 65535
+    t.text     "job_detail",          limit: 65535
+    t.text     "recommended_comment", limit: 65535
+    t.text     "workplace_feature",   limit: 65535
+    t.string   "corporate_name",      limit: 255
+    t.string   "office_name",         limit: 255
+    t.string   "institution_type",    limit: 255
+    t.string   "postalcode",          limit: 255
+    t.string   "prefecture",          limit: 255
+    t.text     "work_location",       limit: 65535
+    t.text     "nearest_station",     limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "otokon_japans", force: :cascade do |t|
@@ -109,6 +127,30 @@ ActiveRecord::Schema.define(version: 20170724042301) do
   end
 
   create_table "ptot_jinzai_banks", force: :cascade do |t|
+    t.string   "page_url",            limit: 255
+    t.string   "title",               limit: 255
+    t.string   "sub_title",           limit: 255
+    t.text     "job_feature",         limit: 65535
+    t.text     "salary",              limit: 65535
+    t.string   "working_hours",       limit: 255
+    t.text     "holiday_vacation",    limit: 65535
+    t.text     "job_category",        limit: 65535
+    t.text     "employment_type",     limit: 65535
+    t.text     "job_detail",          limit: 65535
+    t.text     "recommended_comment", limit: 65535
+    t.text     "workplace_feature",   limit: 65535
+    t.string   "corporate_name",      limit: 255
+    t.string   "office_name",         limit: 255
+    t.string   "institution_type",    limit: 255
+    t.string   "postalcode",          limit: 255
+    t.string   "prefecture",          limit: 255
+    t.text     "work_location",       limit: 65535
+    t.text     "nearest_station",     limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  create_table "st_jinzai_banks", force: :cascade do |t|
     t.string   "page_url",            limit: 255
     t.string   "title",               limit: 255
     t.string   "sub_title",           limit: 255
