@@ -160,6 +160,7 @@ ja:
         cancellation_policy: 'キャンセル料について'
       ptot_jinzai_bank:
         page_url: 'サイトURL'
+        calendar_date: "更新日"
         title: 'タイトル'
         sub_title: 'サブタイトル' 
         job_feature: '求人特徴'
@@ -180,6 +181,7 @@ ja:
         nearest_station: '最寄交通機関'
       ot_jinzai_bank:
         page_url: 'サイトURL'
+        calendar_date: "更新日"
         title: 'タイトル'
         sub_title: 'サブタイトル' 
         job_feature: '求人特徴'
@@ -200,7 +202,8 @@ ja:
         nearest_station: '最寄交通機関'
       st_jinzai_bank:
         page_url: 'サイトURL'
-        title: 'タイトル'
+        calendar_date: "更新日"
+        title: 'タイトル'        
         sub_title: 'サブタイトル' 
         job_feature: '求人特徴'
         salary: '給与'

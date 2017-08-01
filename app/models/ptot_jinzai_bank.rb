@@ -4,6 +4,7 @@ class PtotJinzaiBank < ActiveRecord::Base
     [
       human_attribute_name(:id),
       human_attribute_name(:page_url),
+      human_attribute_name(:calendar_date),
       human_attribute_name(:title),
       human_attribute_name(:sub_title),
       human_attribute_name(:job_feature),
@@ -29,6 +30,7 @@ class PtotJinzaiBank < ActiveRecord::Base
     [
       self.id,
       self.page_url,
+      self.calendar_date,
       self.title,
       self.sub_title,
       self.job_feature,

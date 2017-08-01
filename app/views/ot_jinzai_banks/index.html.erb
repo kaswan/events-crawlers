@@ -9,6 +9,7 @@
     <tr>
       <th>ID</th>
       <th><%= _('Page url') %></th>
+      <th><%= _('Calendar date') %></th>
       <th><%= _('Title') %></th>
       <th><%= _('Sub title') %></th>
       <th><%= _('Job feature') %></th>
@@ -36,6 +37,7 @@
       <tr>
         <td><%= ot_jinzai_bank.id %></td>
         <td><%= link_to 'サイトリンク先へ', ot_jinzai_bank.page_url, target: '_blank' %></td>
+        <td><%= ot_jinzai_bank.calendar_date %></td>
         <td><%= ot_jinzai_bank.title %></td>
         <td><%= ot_jinzai_bank.sub_title %></td>
         <td><%= ot_jinzai_bank.job_feature %></td>

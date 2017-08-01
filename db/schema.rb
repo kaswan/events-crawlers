@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170728012641) do
+ActiveRecord::Schema.define(version: 20170801043822) do
 
   create_table "exeo_japans", force: :cascade do |t|
     t.string   "event_url",                    limit: 255
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170728012641) do
 
   create_table "ot_jinzai_banks", force: :cascade do |t|
     t.string   "page_url",            limit: 255
+    t.string   "calendar_date",       limit: 255
     t.string   "title",               limit: 255
     t.string   "sub_title",           limit: 255
     t.text     "job_feature",         limit: 65535
@@ -128,6 +129,7 @@ ActiveRecord::Schema.define(version: 20170728012641) do
 
   create_table "ptot_jinzai_banks", force: :cascade do |t|
     t.string   "page_url",            limit: 255
+    t.string   "calendar_date",       limit: 255
     t.string   "title",               limit: 255
     t.string   "sub_title",           limit: 255
     t.text     "job_feature",         limit: 65535
@@ -152,6 +154,7 @@ ActiveRecord::Schema.define(version: 20170728012641) do
 
   create_table "st_jinzai_banks", force: :cascade do |t|
     t.string   "page_url",            limit: 255
+    t.string   "calendar_date",       limit: 255
     t.string   "title",               limit: 255
     t.string   "sub_title",           limit: 255
     t.text     "job_feature",         limit: 65535

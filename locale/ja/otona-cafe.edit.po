@@ -38,6 +38,9 @@ msgstr "戻る"
 msgid "CSV Download"
 msgstr "CSVダウンロード"
 
+msgid "Calendar date"
+msgstr ""
+
 msgid "Cancellation deadline"
 msgstr "キャンセル締切"
 
@@ -48,7 +51,7 @@ msgid "Contact info"
 msgstr "連絡先"
 
 msgid "Corporate name"
-msgstr ""
+msgstr "法人名"
 
 msgid "Description"
 msgstr "イベント内容"
@@ -66,7 +69,7 @@ msgid "Eligibility for male"
 msgstr "参加資格【男性】"
 
 msgid "Employment type"
-msgstr ""
+msgstr "雇用形態"
 
 msgid "Event ID"
 msgstr "イベントID"
@@ -153,22 +156,22 @@ msgid "Gathering place"
 msgstr "集合"
 
 msgid "Holiday vacation"
-msgstr ""
+msgstr "休日・休暇"
 
 msgid "Important reminder"
 msgstr "注意事項"
 
 msgid "Institution type"
-msgstr ""
+msgstr "施設形態"
 
 msgid "Job category"
-msgstr ""
+msgstr "募集職種"
 
 msgid "Job detail"
-msgstr ""
+msgstr "業務内容"
 
 msgid "Job feature"
-msgstr ""
+msgstr "求人特徴"
 
 msgid "Main image url"
 msgstr "メイン画像URL"
@@ -177,7 +180,7 @@ msgid "Nearest station"
 msgstr "最寄り駅"
 
 msgid "Office name"
-msgstr ""
+msgstr "事業所名"
 
 msgid "Otokon japan"
 msgstr ""
@@ -270,7 +273,7 @@ msgid "OtokonJapan|Venue name"
 msgstr "開催場所"
 
 msgid "Page url"
-msgstr ""
+msgstr "サイトURL"
 
 msgid "Party japan"
 msgstr ""
@@ -443,7 +446,6 @@ msgstr ""
 msgid "Post|To ping"
 msgstr ""
 
-#, fuzzy
 msgid "Prefecture"
 msgstr "県名"
 
@@ -460,7 +462,7 @@ msgid "Reception time"
 msgstr "受付開始"
 
 msgid "Recommended comment"
-msgstr ""
+msgstr "キャリアパートナーのおすすめコメント"
 
 msgid "Reservation limit for female"
 msgstr "人数条件【女性】"
@@ -475,13 +477,13 @@ msgid "Reservation state for male"
 msgstr "予約状況【男性】"
 
 msgid "Salary"
-msgstr ""
+msgstr "給与"
 
 msgid "Show"
 msgstr "詳細"
 
 msgid "Sub title"
-msgstr ""
+msgstr "サブタイトル"
 
 msgid "Target people"
 msgstr "ターゲット"
@@ -514,10 +516,10 @@ msgid "Venue name"
 msgstr "開催場所"
 
 msgid "Work location"
-msgstr ""
+msgstr "勤務地"
 
 msgid "Working hours"
-msgstr ""
+msgstr "勤務時間"
 
 msgid "Workplace feature"
-msgstr ""
+msgstr "職場特徴"

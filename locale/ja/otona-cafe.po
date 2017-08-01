@@ -38,6 +38,9 @@ msgstr "戻る"
 msgid "CSV Download"
 msgstr "CSVダウンロード"
 
+msgid "Calendar date"
+msgstr "更新日"
+
 msgid "Cancellation deadline"
 msgstr "キャンセル締切"
 

@@ -38,6 +38,9 @@ msgstr ""
 msgid "CSV Download"
 msgstr ""
 
+msgid "Calendar date"
+msgstr ""
+
 msgid "Cancellation deadline"
 msgstr ""
 
