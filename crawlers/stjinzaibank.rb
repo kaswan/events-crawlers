@@ -12,9 +12,9 @@ page.search('//div[@class="melon-box-white"]//a').select{|link| link && link[:hr
   result_page = agent.get(full_link)
   offer_arr = {}  
   result_page.search('//div[@class="melon-resultBox_header"]').each do |dlink|
-    link = dlink.search('a').first[:href] 
-    offer_page_links << link
-    id = link.split('.html').first.split('/').last
+    dtl = dlink.search('a').first[:href] 
+    offer_page_links << dtl
+    id = dtl.split('.html').first.split('/').last
      header_text = dlink.search('ul//li').last.inner_text.squish
      if !header_text.match(/月/).nil? && !header_text.match(/日/).nil?
        (offer_arr[id]||={})['calendar_date'] = header_text
